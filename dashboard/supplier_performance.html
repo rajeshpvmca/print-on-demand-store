@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance Metrics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <style>
+        body { background-color: #f8f9fa; padding: 2rem; font-family: 'Inter', sans-serif; }
+        .page-title { font-family: 'Montserrat', sans-serif; font-weight: 700; color: var(--primary-color); }
+        .stat-card { background: #fff; border-radius: 16px; border: none; box-shadow: 0 4px 15px rgba(0,0,0,0.05); padding: 1.5rem; }
+        .chart-container { background: #fff; border-radius: 16px; padding: 1.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+    </style>
+</head>
+<body>
+    <h2 class="page-title mb-4">Performance Metrics</h2>
+    
+    <div class="row g-4 mb-4">
+        <div class="col-md-3">
+            <div class="stat-card">
+                <p class="text-muted small text-uppercase fw-bold mb-1">Avg Fulfillment Time</p>
+                <h3 class="fw-bold mb-0 text-success">1.8 Days</h3>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="stat-card">
+                <p class="text-muted small text-uppercase fw-bold mb-1">Defect Rate</p>
+                <h3 class="fw-bold mb-0" style="color: var(--primary-color);">0.4%</h3>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="stat-card">
+                <p class="text-muted small text-uppercase fw-bold mb-1">On-Time Shipping</p>
+                <h3 class="fw-bold mb-0 text-dark">98.2%</h3>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="stat-card">
+                <p class="text-muted small text-uppercase fw-bold mb-1">Volume (30 Days)</p>
+                <h3 class="fw-bold mb-0 text-dark">12.4K Items</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-md-6">
+            <div class="chart-container">
+                <h5 class="fw-bold mb-4 text-dark">Fulfillment Speed Trend</h5>
+                <div id="speedChart"></div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="chart-container">
+                <h5 class="fw-bold mb-4 text-dark">Production Volume (Daily)</h5>
+                <div id="volumeChart"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var speedOptions = {
+            series: [{ name: 'Days to Ship', data: [2.5, 2.1, 2.0, 1.9, 1.8, 1.8, 1.7] }],
+            chart: { type: 'line', height: 350, toolbar: { show: false }, fontFamily: 'Inter, sans-serif' },
+            colors: ['#6a11cb'],
+            stroke: { width: 4, curve: 'smooth' },
+            xaxis: { categories: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'] }
+        };
+        new ApexCharts(document.querySelector("#speedChart"), speedOptions).render();
+
+        var volumeOptions = {
+            series: [{ name: 'Items Printed', data: [400, 450, 420, 500, 600, 550, 410] }],
+            chart: { type: 'bar', height: 350, toolbar: { show: false }, fontFamily: 'Inter, sans-serif' },
+            colors: ['#c18a39'],
+            plotOptions: { bar: { borderRadius: 4 } },
+            xaxis: { categories: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'] }
+        };
+        new ApexCharts(document.querySelector("#volumeChart"), volumeOptions).render();
+    </script>
+</body>
+</html>

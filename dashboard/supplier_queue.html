@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fulfillment Queue</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        body { background-color: #f8f9fa; padding: 2rem; font-family: 'Inter', sans-serif; }
+        .page-title { font-family: 'Montserrat', sans-serif; font-weight: 700; color: var(--primary-color); }
+        .kanban-col { background: #e9ecef; border-radius: 12px; padding: 1rem; min-height: 500px; }
+        .kanban-card { background: #fff; border-radius: 8px; padding: 1rem; margin-bottom: 1rem; box-shadow: 0 2px 5px rgba(0,0,0,0.05); cursor: grab; }
+        .kanban-card:active { cursor: grabbing; }
+        .sku-tag { font-family: monospace; font-size: 0.8rem; background: #f8f9fa; border: 1px solid #dee2e6; padding: 2px 6px; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="page-title mb-0">Fulfillment Queue</h2>
+        <button class="btn btn-primary-stackly rounded-pill px-4">Refresh Queue</button>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-md-4">
+            <h6 class="fw-bold text-muted text-uppercase mb-3">Pending Print (12)</h6>
+            <div class="kanban-col">
+                <div class="kanban-card border-start border-4 border-warning">
+                    <div class="d-flex justify-content-between mb-2">
+                        <span class="fw-bold small">#ORD-9021</span>
+                        <span class="badge bg-danger rounded-pill">Urgent</span>
+                    </div>
+                    <p class="mb-2 text-dark fw-bold">2x Premium Cotton Tee</p>
+                    <div class="d-flex gap-2 mb-2">
+                        <span class="sku-tag">TEE-BLK-L</span>
+                        <span class="sku-tag">TEE-WHT-M</span>
+                    </div>
+                    <button class="btn btn-sm btn-outline-primary w-100 mt-2">Start Printing</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <h6 class="fw-bold text-muted text-uppercase mb-3">In Production (5)</h6>
+            <div class="kanban-col">
+                <div class="kanban-card border-start border-4 border-info">
+                    <div class="d-flex justify-content-between mb-2">
+                        <span class="fw-bold small">#ORD-8990</span>
+                        <span class="small text-muted">Started 1h ago</span>
+                    </div>
+                    <p class="mb-2 text-dark fw-bold">1x Ceramic Coffee Mug</p>
+                    <div class="d-flex gap-2 mb-2">
+                        <span class="sku-tag">MUG-WHT-11OZ</span>
+                    </div>
+                    <button class="btn btn-sm btn-outline-success w-100 mt-2">Mark as QC Ready</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <h6 class="fw-bold text-muted text-uppercase mb-3">Ready to Ship (28)</h6>
+            <div class="kanban-col">
+                <div class="kanban-card border-start border-4 border-success">
+                    <div class="d-flex justify-content-between mb-2">
+                        <span class="fw-bold small">#ORD-8942</span>
+                        <span class="small text-success"><i class="fas fa-check-circle"></i> QC Passed</span>
+                    </div>
+                    <p class="mb-2 text-dark fw-bold">1x Classic Hoodie</p>
+                    <button class="btn btn-sm btn-success w-100 mt-2 text-white">Generate Label</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

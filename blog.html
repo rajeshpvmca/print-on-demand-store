@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Stackly Insights</title>
+    <!-- Bootstrap 5.3.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="bg-light overflow-x-hidden">
+
+    <!-- Section 1: Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <!-- Section 2: Blog Hero -->
+     <section class="hero-section position-relative overflow-hidden d-flex align-items-center justify-content-center" style="height: 80vh; min-height: 400px; margin-top: 76px;">
+        <!-- Animated Background Image -->
+        <div class="position-absolute top-0 start-0 w-100 h-100 bg-image-zoom" style="background: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1600&h=800&fit=crop') no-repeat center center; background-size: cover; z-index: 0;"></div>
+        <!-- Premium Gradient Overlay -->
+        <div class="hero-overlay position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(135deg, rgba(18, 18, 18, 0.9) 0%, rgba(106, 17, 203, 0.6) 100%); z-index: 1;"></div>
+        
+        <div class="container text-center position-relative" style="z-index: 2;">
+            <span class="badge bg-white text-dark px-3 py-2 rounded-pill mb-4 shadow-sm fw-bold tracking-wide border border-light" data-aos="fade-down">CREATOR INSIGHTS</span>
+            <h1 class="display-3 fw-bold mb-4 text-white" data-aos="fade-up">Grow Your <span class="text-gradient-animated">Brand</span></h1>
+            <p class="lead text-light opacity-75 max-w-700 mx-auto mb-0" data-aos="fade-up" data-aos-delay="100" style="font-size: 1.25rem;">Tips, trends, and inspiration to help you build and scale your custom merch business.</p>
+        </div>
+    </section>
+
+
+    <!-- Section 3: Featured Article -->
+    <section class="py-5 bg-white">
+        <div class="container py-lg-4">
+            <div class="card border-0 shadow-lg rounded-4 overflow-hidden group hover-lift transition">
+                <a href="#" class="text-decoration-none">
+                    <div class="row g-0">
+                        <div class="col-lg-7 position-relative overflow-hidden" style="min-height: 400px;">
+                            <img src="https://images.unsplash.com/photo-1493612276216-ee3925520721?w=1000&h=800&fit=crop" class="w-100 h-100 object-fit-cover hover-scale transition position-absolute top-0 start-0" alt="Featured Article">
+                        </div>
+                        <div class="col-lg-5 d-flex align-items-center bg-light">
+                            <div class="card-body p-4 p-md-5">
+                                <span class="badge bg-primary-custom text-white rounded-pill px-3 py-2 mb-3 fw-bold shadow-sm tracking-wide">FEATURED</span>
+                                <h2 class="card-title fw-bold mb-3 text-dark" style="font-size: clamp(1.5rem, 3vw, 2.2rem);">The Ultimate Guide to Starting a Print-on-Demand Business in 2026</h2>
+                                <p class="card-text text-muted mb-4" style="line-height: 1.7;">Everything you need to know about finding a niche, setting up your store, creating designs that sell, and marketing to your first 100 customers.</p>
+                                <div class="d-flex align-items-center mb-4">
+                                    <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?w=200&h=200&fit=crop" class="rounded-circle object-fit-cover shadow-sm me-3" style="width: 50px; height: 50px;" alt="Alex Mercer">
+                                    <div>
+                                        <p class="mb-0 fw-bold small text-dark">Alex Mercer</p>
+                                        <p class="text-muted small mb-0 fw-medium">Oct 12, 2026 • 15 min read</p>
+                                    </div>
+                                </div>
+                                <span class="btn btn-secondary-stackly fw-bold rounded-pill px-4">Read Article <i class="bi bi-arrow-right ms-1"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Categories -->
+    <section class="py-3 py-lg-4 bg-white border-bottom shadow-sm sticky-top" style="top: 76px; z-index: 900;">
+        <div class="container">
+            <div class="d-flex overflow-auto pb-2 gap-2 gap-md-3 justify-content-lg-center" style="scrollbar-width: none;">
+                <button type="button" class="btn btn-primary-stackly rounded-pill px-4 flex-shrink-0 fw-bold shadow-sm">All Posts</button>
+                <button type="button" class="btn btn-secondary-stackly border-light-subtle rounded-pill px-4 flex-shrink-0 hover-lift">Design Tips</button>
+                <button type="button" class="btn btn-secondary-stackly border-light-subtle rounded-pill px-4 flex-shrink-0 hover-lift">Marketing</button>
+                <button type="button" class="btn btn-secondary-stackly border-light-subtle rounded-pill px-4 flex-shrink-0 hover-lift">Success Stories</button>
+                <button type="button" class="btn btn-secondary-stackly border-light-subtle rounded-pill px-4 flex-shrink-0 hover-lift">Product News</button>
+                <button type="button" class="btn btn-secondary-stackly border-light-subtle rounded-pill px-4 flex-shrink-0 hover-lift">Ecommerce</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Recent Posts Grid -->
+    <section class="py-5 bg-light">
+        <div class="container py-lg-4">
+            <div class="d-flex justify-content-between align-items-end mb-4 mb-lg-5" data-aos="fade-up">
+                <h3 class="fw-bold mb-0 display-6" style="font-size: clamp(1.8rem, 4vw, 2.5rem);">Latest Articles</h3>
+            </div>
+            
+            <div class="row g-4 g-lg-5">
+                <!-- Post 1 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <a href="#" class="card blog-card h-100 bg-white border-0 shadow-sm rounded-4 overflow-hidden hover-lift group text-decoration-none">
+                        <div class="position-relative overflow-hidden" style="height: 220px;">
+                            <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?w=800&h=500&fit=crop" class="w-100 h-100 object-fit-cover hover-scale transition" alt="Design Tips">
+                        </div>
+                        <div class="card-body p-4 p-xl-5">
+                            <span class="text-primary-custom small fw-bold text-uppercase tracking-wide mb-2 d-block">Design Tips</span>
+                            <h4 class="card-title fw-bold text-dark mb-3">Top 10 Color Trends for Summer Apparel</h4>
+                            <p class="card-text text-muted mb-0">Stay ahead of the curve with these trending color palettes that consumers are actively searching for.</p>
+                        </div>
+                        <div class="card-footer bg-white border-0 p-4 p-xl-5 pt-0 mt-auto">
+                            <span class="text-dark fw-bold group-hover-text-primary transition">Read More <i class="bi bi-arrow-right ms-1 transition"></i></span>
+                        </div>
+                    </a>
+                </div>
+                <!-- Post 2 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <a href="#" class="card blog-card h-100 bg-white border-0 shadow-sm rounded-4 overflow-hidden hover-lift group text-decoration-none">
+                        <div class="position-relative overflow-hidden" style="height: 220px;">
+                            <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=800&h=500&fit=crop" class="w-100 h-100 object-fit-cover hover-scale transition" alt="Marketing">
+                        </div>
+                        <div class="card-body p-4 p-xl-5">
+                            <span class="text-success small fw-bold text-uppercase tracking-wide mb-2 d-block">Marketing</span>
+                            <h4 class="card-title fw-bold text-dark mb-3">How to Use TikTok to Sell Custom Mugs</h4>
+                            <p class="card-text text-muted mb-0">A step-by-step framework for creating viral short-form content that converts viewers into buyers.</p>
+                        </div>
+                        <div class="card-footer bg-white border-0 p-4 p-xl-5 pt-0 mt-auto">
+                            <span class="text-dark fw-bold group-hover-text-primary transition">Read More <i class="bi bi-arrow-right ms-1 transition"></i></span>
+                        </div>
+                    </a>
+                </div>
+                <!-- Post 3 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <a href="#" class="card blog-card h-100 bg-white border-0 shadow-sm rounded-4 overflow-hidden hover-lift group text-decoration-none">
+                        <div class="position-relative overflow-hidden" style="height: 220px;">
+                            <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=800&h=500&fit=crop" class="w-100 h-100 object-fit-cover hover-scale transition" alt="Success Stories">
+                        </div>
+                        <div class="card-body p-4 p-xl-5">
+                            <span class="text-secondary-custom small fw-bold text-uppercase tracking-wide mb-2 d-block">Success Stories</span>
+                            <h4 class="card-title fw-bold text-dark mb-3">From $0 to $10k/Month: The Dog Lovers Niche</h4>
+                            <p class="card-text text-muted mb-0">Interview with Sarah, who built a massive following selling custom pet portraits on hoodies.</p>
+                        </div>
+                        <div class="card-footer bg-white border-0 p-4 p-xl-5 pt-0 mt-auto">
+                            <span class="text-dark fw-bold group-hover-text-primary transition">Read More <i class="bi bi-arrow-right ms-1 transition"></i></span>
+                        </div>
+                    </a>
+                </div>
+                <!-- Post 4 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+                    <a href="#" class="card blog-card h-100 bg-white border-0 shadow-sm rounded-4 overflow-hidden hover-lift group text-decoration-none">
+                        <div class="position-relative overflow-hidden" style="height: 220px;">
+                            <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=800&h=500&fit=crop" class="w-100 h-100 object-fit-cover hover-scale transition" alt="Product News">
+                        </div>
+                        <div class="card-body p-4 p-xl-5">
+                            <span class="text-danger small fw-bold text-uppercase tracking-wide mb-2 d-block">Product News</span>
+                            <h4 class="card-title fw-bold text-dark mb-3">Introducing Premium Eco-Friendly T-Shirts</h4>
+                            <p class="card-text text-muted mb-0">We're expanding our catalog with 100% organic cotton tees that your eco-conscious customers will love.</p>
+                        </div>
+                        <div class="card-footer bg-white border-0 p-4 p-xl-5 pt-0 mt-auto">
+                            <span class="text-dark fw-bold group-hover-text-primary transition">Read More <i class="bi bi-arrow-right ms-1 transition"></i></span>
+                        </div>
+                    </a>
+                </div>
+                <!-- Post 5 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+                    <a href="#" class="card blog-card h-100 bg-white border-0 shadow-sm rounded-4 overflow-hidden hover-lift group text-decoration-none">
+                        <div class="position-relative overflow-hidden" style="height: 220px;">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop" class="w-100 h-100 object-fit-cover hover-scale transition" alt="Ecommerce">
+                        </div>
+                        <div class="card-body p-4 p-xl-5">
+                            <span class="text-info small fw-bold text-uppercase tracking-wide mb-2 d-block">Ecommerce</span>
+                            <h4 class="card-title fw-bold text-dark mb-3">Optimizing Your Etsy Titles for SEO</h4>
+                            <p class="card-text text-muted mb-0">Learn the exact formula for writing product titles that rank on the first page of Etsy search.</p>
+                        </div>
+                        <div class="card-footer bg-white border-0 p-4 p-xl-5 pt-0 mt-auto">
+                            <span class="text-dark fw-bold group-hover-text-primary transition">Read More <i class="bi bi-arrow-right ms-1 transition"></i></span>
+                        </div>
+                    </a>
+                </div>
+                <!-- Post 6 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
+                    <a href="#" class="card blog-card h-100 bg-white border-0 shadow-sm rounded-4 overflow-hidden hover-lift group text-decoration-none">
+                        <div class="position-relative overflow-hidden" style="height: 220px;">
+                            <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=500&fit=crop" class="w-100 h-100 object-fit-cover hover-scale transition" alt="Design Tips">
+                        </div>
+                        <div class="card-body p-4 p-xl-5">
+                            <span class="text-warning small fw-bold text-uppercase tracking-wide mb-2 d-block">Design Tips</span>
+                            <h4 class="card-title fw-bold text-dark mb-3">Mastering Typography on Apparel</h4>
+                            <p class="card-text text-muted mb-0">Fonts matter. Here's a guide to pairing fonts and placing text for maximum visual impact on t-shirts.</p>
+                        </div>
+                        <div class="card-footer bg-white border-0 p-4 p-xl-5 pt-0 mt-auto">
+                            <span class="text-dark fw-bold group-hover-text-primary transition">Read More <i class="bi bi-arrow-right ms-1 transition"></i></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5 pt-4">
+                <a href="#" class="btn btn-secondary-stackly btn-lg rounded-pill px-5 fw-bold hover-lift shadow-sm">Load More Articles</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Video Masterclasses (NEW) -->
+    <section class="py-5 bg-white">
+        <div class="container py-lg-4">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="badge bg-secondary-soft text-secondary-custom px-3 py-2 rounded-pill mb-3 fw-bold tracking-wide">LEARN FROM THE PROS</span>
+                <h2 class="display-5 fw-bold mb-3 text-break-mobile" style="font-size: clamp(2rem, 6vw, 3rem);">Video <span class="text-gradient">Masterclasses</span></h2>
+                <p class="lead text-muted max-w-700 mx-auto" style="font-size: clamp(1rem, 4vw, 1.25rem);">Watch step-by-step tutorials from top sellers.</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card border-0 rounded-4 shadow-sm overflow-hidden h-100 group hover-lift cursor-pointer">
+                        <div class="position-relative" style="height: 250px;">
+                            <img src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=800&h=600&fit=crop" class="w-100 h-100 object-fit-cover hover-scale transition" alt="Social Media Ads">
+                            <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-25 transition group-hover-bg-opacity-50"></div>
+                            <div class="position-absolute top-50 start-50 translate-middle">
+                                <div class="bg-white rounded-circle d-flex align-items-center justify-content-center shadow-lg hover-scale transition" style="width: 60px; height: 60px;">
+                                    <i class="bi bi-play-fill fs-3 text-primary-custom ms-1"></i>
+                                </div>
+                            </div>
+                            <span class="position-absolute bottom-0 end-0 bg-dark text-white small fw-bold px-2 py-1 m-3 rounded">12:45</span>
+                        </div>
+                        <div class="card-body p-4 bg-light">
+                            <h5 class="fw-bold mb-2">Mastering Instagram Ads</h5>
+                            <p class="text-muted small mb-0">Learn how to lower your CPC and drive high-converting traffic.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card border-0 rounded-4 shadow-sm overflow-hidden h-100 group hover-lift cursor-pointer">
+                        <div class="position-relative" style="height: 250px;">
+                            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&h=600&fit=crop" class="w-100 h-100 object-fit-cover hover-scale transition" alt="SEO Basics">
+                            <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-25 transition group-hover-bg-opacity-50"></div>
+                            <div class="position-absolute top-50 start-50 translate-middle">
+                                <div class="bg-white rounded-circle d-flex align-items-center justify-content-center shadow-lg hover-scale transition" style="width: 60px; height: 60px;">
+                                    <i class="bi bi-play-fill fs-3 text-primary-custom ms-1"></i>
+                                </div>
+                            </div>
+                            <span class="position-absolute bottom-0 end-0 bg-dark text-white small fw-bold px-2 py-1 m-3 rounded">08:30</span>
+                        </div>
+                        <div class="card-body p-4 bg-light">
+                            <h5 class="fw-bold mb-2">SEO for Your Storefront</h5>
+                            <p class="text-muted small mb-0">Optimize your titles and descriptions to rank #1 on Google.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card border-0 rounded-4 shadow-sm overflow-hidden h-100 group hover-lift cursor-pointer">
+                        <div class="position-relative" style="height: 250px;">
+                            <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&h=600&fit=crop" class="w-100 h-100 object-fit-cover hover-scale transition" alt="Design Tools">
+                            <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-25 transition group-hover-bg-opacity-50"></div>
+                            <div class="position-absolute top-50 start-50 translate-middle">
+                                <div class="bg-white rounded-circle d-flex align-items-center justify-content-center shadow-lg hover-scale transition" style="width: 60px; height: 60px;">
+                                    <i class="bi bi-play-fill fs-3 text-primary-custom ms-1"></i>
+                                </div>
+                            </div>
+                            <span class="position-absolute bottom-0 end-0 bg-dark text-white small fw-bold px-2 py-1 m-3 rounded">15:20</span>
+                        </div>
+                        <div class="card-body p-4 bg-light">
+                            <h5 class="fw-bold mb-2">Canva Design Masterclass</h5>
+                            <p class="text-muted small mb-0">Create professional, print-ready apparel designs for free.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Newsletter Subscribe -->
+    <section class="py-5 position-relative bg-image-zoom overflow-hidden" style="background-image: url('https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=1600&h=800&fit=crop'); background-size: cover; background-position: center; min-height: 500px; display: flex; align-items: center;">
+        <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-75 z-index-1"></div>
+        <div class="container position-relative z-index-2">
+            <div class="glass-effect-dark rounded-4 p-4 p-md-5 mx-auto max-w-700 text-center shadow-lg border border-light border-opacity-25" data-aos="zoom-in">
+                <h2 class="display-5 fw-bold text-white mb-3 text-break-mobile" style="font-size: clamp(2rem, 5vw, 2.8rem);">Never Miss an Update</h2>
+                <p class="lead text-light opacity-75 mb-4 mx-auto" style="font-size: clamp(1rem, 4vw, 1.2rem);">Join 50,000+ creators who receive our weekly newsletter packed with design resources, marketing strategies, and exclusive product discounts.</p>
+                <form class="d-flex flex-column flex-sm-row justify-content-center gap-2 max-w-700 mx-auto">
+                    <input type="email" class="form-control form-control-lg bg-white border-0 w-100 px-4" placeholder="Enter your email address" style="max-width: 400px; height: 55px; border-radius: 50px;">
+                    <button type="submit" class="btn btn-primary-stackly btn-lg px-5 rounded-pill shadow-lg hover-scale" style="height: 55px;">Subscribe Now</button>
+                </form>
+                <p class="small text-light opacity-50 mt-4 mb-0 fw-medium">We respect your privacy. Unsubscribe at any time.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</body>
+</html>
+
+
+
+

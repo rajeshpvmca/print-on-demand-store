@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spending Analytics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <style>
+        body { background-color: #f8f9fa; padding: 2rem; font-family: 'Inter', sans-serif; }
+        .page-title { font-family: 'Montserrat', sans-serif; font-weight: 700; color: var(--primary-color); }
+        .stat-card { background: #fff; border-radius: 16px; border: none; box-shadow: 0 4px 15px rgba(0,0,0,0.05); padding: 1.5rem; }
+        .chart-container { background: #fff; border-radius: 16px; padding: 1.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-top: 1.5rem; }
+    </style>
+</head>
+<body>
+    <h2 class="page-title mb-4">Spending Analytics</h2>
+    
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="stat-card">
+                <p class="text-muted small text-uppercase fw-bold mb-1">Total Spent</p>
+                <h3 class="fw-bold mb-0" style="color: var(--primary-color);">$1,245.50</h3>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="stat-card">
+                <p class="text-muted small text-uppercase fw-bold mb-1">Orders Placed</p>
+                <h3 class="fw-bold mb-0 text-dark">18</h3>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="stat-card">
+                <p class="text-muted small text-uppercase fw-bold mb-1">Saved via Discounts</p>
+                <h3 class="fw-bold mb-0 text-success">$85.20</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="chart-container">
+        <h5 class="fw-bold mb-4 text-dark">Monthly Spending</h5>
+        <div id="spendingChart"></div>
+    </div>
+
+    <script>
+        var options = {
+            series: [{
+                name: 'Spending ($)',
+                data: [45, 120, 85, 210, 150, 320, 180, 240, 190]
+            }],
+            chart: {
+                type: 'area',
+                height: 350,
+                toolbar: { show: false },
+                fontFamily: 'Inter, sans-serif'
+            },
+            colors: ['#6a11cb'],
+            fill: {
+                type: 'gradient',
+                gradient: {
+                    shadeIntensity: 1,
+                    opacityFrom: 0.7,
+                    opacityTo: 0.1,
+                    stops: [0, 90, 100]
+                }
+            },
+            dataLabels: { enabled: false },
+            stroke: { curve: 'smooth', width: 3 },
+            xaxis: {
+                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+            },
+            theme: { mode: 'light' }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#spendingChart"), options);
+        chart.render();
+    </script>
+</body>
+</html>

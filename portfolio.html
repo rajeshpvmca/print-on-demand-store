@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creator Portfolio - Stackly</title>
+    <!-- Bootstrap 5.3.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="bg-light overflow-x-hidden">
+
+    <!-- Section 1: Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <!-- Section 2: Portfolio Hero -->
+      <section class="hero-section position-relative overflow-hidden d-flex align-items-center justify-content-center" style="height: 80vh; min-height: 400px; margin-top: 76px;">
+        <!-- Animated Background Image -->
+        <div class="position-absolute top-0 start-0 w-100 h-100 bg-image-zoom" style="background: url('https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=1600&h=800&fit=crop') no-repeat center center; background-size: cover; z-index: 0;"></div>
+        <!-- Premium Gradient Overlay -->
+        <div class="hero-overlay position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(135deg, rgba(18, 18, 18, 0.9) 0%, rgba(106, 17, 203, 0.6) 100%); z-index: 1;"></div>
+        
+        <div class="container text-center position-relative" style="z-index: 2;">
+            <span class="badge bg-white text-dark px-3 py-2 rounded-pill mb-4 shadow-sm fw-bold tracking-wide border border-light" data-aos="fade-down">CREATOR SHOWCASE</span>
+            <h1 class="display-3 fw-bold mb-4 text-white" data-aos="fade-up">Featured <span class="text-gradient-animated">Creators</span></h1>
+            <p class="lead text-light opacity-75 max-w-700 mx-auto mb-0" data-aos="fade-up" data-aos-delay="100" style="font-size: 1.25rem;">Get inspired by the incredible designs and successful brands built using our print-on-demand platform.</p>
+        </div>
+    </section>
+
+    <!-- Section 3: Filters -->
+    <section class="py-3 py-lg-4 bg-white border-bottom shadow-sm sticky-top" style="top: 76px; z-index: 900;">
+        <div class="container">
+            <div class="d-flex overflow-auto pb-2 gap-2 gap-md-3 justify-content-lg-center" style="scrollbar-width: none;">
+                <button type="button" class="btn btn-primary-stackly rounded-pill px-4 flex-shrink-0 fw-bold shadow-sm">All Designs</button>
+                <button type="button" class="btn btn-secondary-stackly border-light-subtle rounded-pill px-4 flex-shrink-0 hover-lift">Streetwear</button>
+                <button type="button" class="btn btn-secondary-stackly border-light-subtle rounded-pill px-4 flex-shrink-0 hover-lift">Digital Art</button>
+                <button type="button" class="btn btn-secondary-stackly border-light-subtle rounded-pill px-4 flex-shrink-0 hover-lift">Corporate Merch</button>
+                <button type="button" class="btn btn-secondary-stackly border-light-subtle rounded-pill px-4 flex-shrink-0 hover-lift">Home Decor</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Gallery Grid -->
+    <section class="py-5 bg-light">
+        <div class="container py-lg-4">
+            <div class="row g-4 g-lg-5">
+                <!-- Gallery Item 1 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <a href="#" class="position-relative overflow-hidden rounded-4 shadow-sm group bg-white d-block text-decoration-none" style="height: 400px;">
+                        <img src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?w=600&h=800&fit=crop" class="w-100 h-100 object-fit-cover hover-scale" alt="Neon Nights">
+                        <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-75 d-flex flex-column justify-content-end p-4 opacity-0 transition" style="opacity: 0; transition: opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0'">
+                            <h4 class="text-white fw-bold">Neon Nights Collection</h4>
+                            <p class="text-white opacity-75 small">Cyberpunk inspired streetwear</p>
+                            <span class="text-primary-custom fw-bold text-decoration-none">View Details <i class="bi bi-arrow-right"></i></span>
+                        </div>
+                    </a>
+                </div>
+                <!-- Gallery Item 2 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <a href="#" class="position-relative overflow-hidden rounded-4 shadow-sm group bg-white d-block text-decoration-none" style="height: 400px;">
+                        <img src="https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?w=600&h=800&fit=crop" class="w-100 h-100 object-fit-cover hover-scale" alt="Pastel Dreams">
+                        <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-75 d-flex flex-column justify-content-end p-4 opacity-0 transition" style="opacity: 0; transition: opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0'">
+                            <h4 class="text-white fw-bold">Pastel Dreams Mugs</h4>
+                            <p class="text-white opacity-75 small">Digital illustrations</p>
+                            <span class="text-primary-custom fw-bold text-decoration-none">View Details <i class="bi bi-arrow-right"></i></span>
+                        </div>
+                    </a>
+                </div>
+                <!-- Gallery Item 3 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <a href="#" class="position-relative overflow-hidden rounded-4 shadow-sm group bg-white d-block text-decoration-none" style="height: 400px;">
+                        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&h=800&fit=crop" class="w-100 h-100 object-fit-cover hover-scale" alt="Tech Startup">
+                        <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-75 d-flex flex-column justify-content-end p-4 opacity-0 transition" style="opacity: 0; transition: opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0'">
+                            <h4 class="text-white fw-bold">Tech Startup Swag</h4>
+                            <p class="text-white opacity-75 small">Corporate embroidered polos</p>
+                            <span class="text-primary-custom fw-bold text-decoration-none">View Details <i class="bi bi-arrow-right"></i></span>
+                        </div>
+                    </a>
+                </div>
+                <!-- Gallery Item 4 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <a href="#" class="position-relative overflow-hidden rounded-4 shadow-sm group bg-white d-block text-decoration-none" style="height: 400px;">
+                        <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=600&h=800&fit=crop" class="w-100 h-100 object-fit-cover hover-scale" alt="Canvas Art">
+                        <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-75 d-flex flex-column justify-content-end p-4 opacity-0 transition" style="opacity: 0; transition: opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0'">
+                            <h4 class="text-white fw-bold">Minimalist Canvas Art</h4>
+                            <p class="text-white opacity-75 small">Home decor collection</p>
+                            <span class="text-primary-custom fw-bold text-decoration-none">View Details <i class="bi bi-arrow-right"></i></span>
+                        </div>
+                    </a>
+                </div>
+                <!-- Gallery Item 5 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                    <a href="#" class="position-relative overflow-hidden rounded-4 shadow-sm group bg-white d-block text-decoration-none" style="height: 400px;">
+                        <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=600&h=800&fit=crop" class="w-100 h-100 object-fit-cover hover-scale" alt="Retro Gaming">
+                        <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-75 d-flex flex-column justify-content-end p-4 opacity-0 transition" style="opacity: 0; transition: opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0'">
+                            <h4 class="text-white fw-bold">Retro Gaming Hoodies</h4>
+                            <p class="text-white opacity-75 small">Niche apparel</p>
+                            <span class="text-primary-custom fw-bold text-decoration-none">View Details <i class="bi bi-arrow-right"></i></span>
+                        </div>
+                    </a>
+                </div>
+                <!-- Gallery Item 6 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+                    <a href="#" class="position-relative overflow-hidden rounded-4 shadow-sm group bg-white d-block text-decoration-none" style="height: 400px;">
+                        <img src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?w=600&h=800&fit=crop" class="w-100 h-100 object-fit-cover hover-scale" alt="Ocean Vibes">
+                        <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-75 d-flex flex-column justify-content-end p-4 opacity-0 transition" style="opacity: 0; transition: opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0'">
+                            <h4 class="text-white fw-bold">Ocean Vibes Accessories</h4>
+                            <p class="text-white opacity-75 small">Phone cases & totes</p>
+                            <span class="text-primary-custom fw-bold text-decoration-none">View Details <i class="bi bi-arrow-right"></i></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5 pt-3">
+                <button class="btn btn-secondary-stackly btn-lg rounded-pill px-5 fw-bold hover-lift shadow-sm">Load More Designs</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Success Story Highlight -->
+    <section class="py-5 bg-dark-custom text-white border-top border-secondary position-relative">
+        <div class="container position-relative z-index-1 py-lg-4">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-5" data-aos="fade-right">
+                    <span class="badge bg-secondary-soft text-secondary-custom px-3 py-2 rounded-pill mb-3 fw-bold tracking-wide">FEATURED CREATOR</span>
+                    <h2 class="display-6 fw-bold mb-4 text-break-mobile" style="font-size: clamp(2rem, 5vw, 2.5rem);">How 'Urban Echo' scaled to 6-figures in 8 months</h2>
+                    <p class="lead opacity-75 mb-4" style="font-size: clamp(1rem, 4vw, 1.25rem);">"We started with zero inventory and just three designs on Stackly. The print quality blew our customers away, and the automated fulfillment allowed us to focus 100% on marketing and design."</p>
+                    <div class="d-flex align-items-center mt-4">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop" class="rounded-circle border border-2 border-secondary object-fit-cover shadow-sm me-3" style="width: 60px; height: 60px;" alt="Marcus Johnson">
+                        <div>
+                            <p class="mb-0 fw-bold fs-5">Marcus Johnson</p>
+                            <p class="small opacity-50 mb-0">Founder, Urban Echo</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7" data-aos="fade-left">
+                    <div class="rounded-4 overflow-hidden shadow-lg position-relative group hover-lift cursor-pointer" style="height: 400px;">
+                        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1000&h=600&fit=crop" class="w-100 h-100 object-fit-cover hover-scale transition" alt="Video Thumbnail">
+                        <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 transition group-hover-bg-opacity-75"></div>
+                        <div class="position-absolute top-50 start-50 translate-middle text-center z-index-1">
+                            <button class="btn btn-secondary-stackly bg-white text-dark border-white rounded-circle shadow-lg d-flex align-items-center justify-content-center mx-auto hover-scale transition" style="width: 80px; height: 80px;">
+                                <i class="bi bi-play-fill display-5 text-primary-custom ms-1"></i>
+                            </button>
+                            <p class="text-white fw-bold mt-3 tracking-wide text-uppercase small">Watch Video</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Creator Testimonials (NEW) -->
+    <section class="py-5 bg-white">
+        <div class="container py-lg-4">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-5 fw-bold mb-3 text-break-mobile" style="font-size: clamp(2rem, 6vw, 3rem);">Loved by <span class="text-gradient">Creators</span></h2>
+                <p class="lead text-muted max-w-700 mx-auto" style="font-size: clamp(1rem, 4vw, 1.25rem);">Join thousands of successful entrepreneurs building their empire.</p>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Testimonial 1 -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card border-0 rounded-4 shadow-sm h-100 p-4 hover-lift bg-light">
+                        <div class="d-flex text-warning mb-3">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="fst-italic opacity-75 mb-4 flex-grow-1">"The seamless integrations with Shopify saved me countless hours. I can literally design a product, publish it, and start selling within 10 minutes."</p>
+                        <div class="d-flex align-items-center">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop" class="rounded-circle object-fit-cover me-3 shadow-sm" style="width: 50px; height: 50px;" alt="Sarah Jenkins">
+                            <div>
+                                <h6 class="mb-0 fw-bold">Sarah Jenkins</h6>
+                                <p class="small text-muted mb-0">Illustrator</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card border-0 rounded-4 shadow-sm h-100 p-4 hover-lift bg-light">
+                        <div class="d-flex text-warning mb-3">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="fst-italic opacity-75 mb-4 flex-grow-1">"I never thought starting an apparel brand could be this easy. No minimums, zero inventory, and the print quality is incredibly premium."</p>
+                        <div class="d-flex align-items-center">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop" class="rounded-circle object-fit-cover me-3 shadow-sm" style="width: 50px; height: 50px;" alt="David Chen">
+                            <div>
+                                <h6 class="mb-0 fw-bold">David Chen</h6>
+                                <p class="small text-muted mb-0">Streetwear Designer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card border-0 rounded-4 shadow-sm h-100 p-4 hover-lift bg-light">
+                        <div class="d-flex text-warning mb-3">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="fst-italic opacity-75 mb-4 flex-grow-1">"The mockup generator is a game changer. Being able to see exactly what the final product will look like helps me sell with confidence."</p>
+                        <div class="d-flex align-items-center">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&h=200&fit=crop" class="rounded-circle object-fit-cover me-3 shadow-sm" style="width: 50px; height: 50px;" alt="Elena Rodriguez">
+                            <div>
+                                <h6 class="mb-0 fw-bold">Elena Rodriguez</h6>
+                                <p class="small text-muted mb-0">E-commerce Owner</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Call to Action -->
+    <section class="py-5 position-relative bg-image-zoom overflow-hidden" style="background-image: url('https://images.unsplash.com/photo-1558655146-d09347e92766?w=1600&h=600&fit=crop'); background-size: cover; background-position: center; min-height: 400px; display: flex; align-items: center;">
+        <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-75 z-index-1"></div>
+        <div class="container position-relative z-index-2">
+            <div class="glass-effect-dark rounded-4 p-4 p-md-5 mx-auto max-w-700 text-center shadow-lg border border-light border-opacity-25" data-aos="zoom-in">
+                <h2 class="display-5 fw-bold text-white mb-4 text-break-mobile" style="font-size: clamp(2rem, 6vw, 3rem);">Ready to showcase your designs?</h2>
+                <p class="lead text-light opacity-75 mb-5 mx-auto" style="font-size: clamp(1rem, 4vw, 1.25rem);">Create an account today and start turning your creative vision into a profitable reality.</p>
+                <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+                    <a href="products.html" class="btn btn-primary-stackly btn-lg rounded-pill px-5 fw-bold shadow-lg hover-scale">Start Designing Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</body>
+</html>
+
+
+
+
