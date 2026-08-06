@@ -9,56 +9,98 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="../css/style.css">
     <style>
-        body { background-color: #f8f9fa; padding: 2rem; font-family: 'Inter', sans-serif; }
+        body { background-color: #f8f9fa; padding: 1.5rem; font-family: 'Inter', sans-serif; overflow-x: hidden; }
         .page-title { font-family: 'Montserrat', sans-serif; font-weight: 700; color: var(--primary-color); }
-        .studio-canvas { background: #fff; border-radius: 16px; border: 2px dashed var(--outline-variant); height: 500px; display: flex; align-items: center; justify-content: center; position: relative; }
-        .controls-panel { background: #fff; border-radius: 16px; padding: 1.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.02); height: 100%; }
-        .mockup-img { height: 100%; width: 100%; object-fit: contain; padding: 20px; opacity: 0.8; }
-        .upload-overlay { position: absolute; display: flex; flex-direction: column; align-items: center; color: var(--primary-color); }
+        
+        .studio-canvas { background: #fff; border-radius: 16px; border: 2px dashed #dee2e6; height: 100%; min-height: 500px; display: flex; align-items: center; justify-content: center; position: relative; transition: all 0.3s ease; }
+        .studio-canvas:hover { border-color: var(--primary-color); background: rgba(106, 17, 203, 0.02); }
+        .mockup-img { height: 100%; width: 100%; object-fit: contain; padding: 2rem; opacity: 0.9; }
+        .upload-overlay { position: absolute; display: flex; flex-direction: column; align-items: center; color: var(--primary-color); background: rgba(255,255,255,0.9); padding: 2rem; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center; }
+        
+        .controls-panel { background: #fff; border-radius: 16px; padding: 1.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.03); height: 100%; }
+        .color-swatch { width: 35px; height: 35px; border-radius: 50%; cursor: pointer; border: 2px solid transparent; transition: transform 0.2s; }
+        .color-swatch:hover, .color-swatch.active { transform: scale(1.1); border-color: var(--primary-color); }
+        
+        .tool-bar { position: absolute; top: 15px; left: 15px; background: #fff; padding: 8px; border-radius: 50px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); display: flex; gap: 10px; z-index: 10; }
+        .tool-btn { background: none; border: none; color: #6c757d; border-radius: 50%; width: 35px; height: 35px; display: flex; justify-content: center; align-items: center; transition: all 0.2s; }
+        .tool-btn:hover, .tool-btn.active { background: rgba(106, 17, 203, 0.1); color: var(--primary-color); }
+
+        @media (max-width: 768px) {
+            body { padding: 1rem; }
+            .studio-canvas { min-height: 350px; margin-bottom: 1.5rem; }
+            .upload-overlay { padding: 1rem; }
+            .upload-overlay span.fs-1 { font-size: 2rem !important; }
+        }
     </style>
 </head>
 <body>
-    <div class="d-flex justify-content-between align-items-center mb-4">
+    <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
         <h2 class="page-title mb-0">Product Studio</h2>
-        <button class="btn btn-primary-stackly rounded-pill px-4">Publish Product</button>
+        <div class="d-flex gap-2 w-sm-100">
+            <button class="btn btn-outline-secondary rounded-pill px-4 flex-grow-1">Save Draft</button>
+            <button class="btn btn-primary-stackly rounded-pill px-4 flex-grow-1">Publish</button>
+        </div>
     </div>
 
-    <div class="row g-4">
-        <div class="col-md-8">
+    <div class="row g-3 g-md-4 align-items-stretch">
+        <div class="col-12 col-lg-8">
             <div class="studio-canvas shadow-sm">
+                <div class="tool-bar">
+                    <button class="tool-btn active"><span class="material-symbols-outlined fs-6">front_hand</span></button>
+                    <button class="tool-btn"><span class="material-symbols-outlined fs-6">text_fields</span></button>
+                    <button class="tool-btn"><span class="material-symbols-outlined fs-6">undo</span></button>
+                    <button class="tool-btn"><span class="material-symbols-outlined fs-6">redo</span></button>
+                </div>
                 <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&h=800&fit=crop" class="mockup-img" alt="Blank Tee">
                 <div class="upload-overlay">
                     <span class="material-symbols-outlined fs-1 mb-2">cloud_upload</span>
-                    <span class="fw-bold">Drag & Drop Design Here</span>
+                    <span class="fw-bold fs-5">Drag & Drop Design</span>
+                    <p class="small text-muted mb-3">PNG or JPEG, up to 10MB</p>
+                    <button class="btn btn-primary-stackly rounded-pill px-4">Browse Files</button>
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
+        
+        <div class="col-12 col-lg-4">
             <div class="controls-panel">
-                <h5 class="fw-bold mb-4 text-dark">Settings</h5>
+                <h5 class="fw-bold mb-4 text-dark border-bottom pb-3">Product Settings</h5>
                 
-                <label class="form-label text-muted small text-uppercase fw-bold">Select Product</label>
-                <select class="form-select mb-4 shadow-none border-1 border-secondary">
-                    <option>Premium Cotton Tee</option>
-                    <option>Classic Hoodie</option>
-                    <option>Ceramic Mug</option>
-                </select>
-
-                <label class="form-label text-muted small text-uppercase fw-bold">Color Options</label>
-                <div class="d-flex gap-2 mb-4">
-                    <div style="width: 30px; height: 30px; background: #000; border-radius: 50%; cursor: pointer;"></div>
-                    <div style="width: 30px; height: 30px; background: #fff; border: 1px solid #ccc; border-radius: 50%; cursor: pointer;"></div>
-                    <div style="width: 30px; height: 30px; background: #dc3545; border-radius: 50%; cursor: pointer;"></div>
-                    <div style="width: 30px; height: 30px; background: #0d6efd; border-radius: 50%; cursor: pointer;"></div>
+                <div class="mb-4">
+                    <label class="form-label text-muted small text-uppercase fw-bold">Select Blank Product</label>
+                    <select class="form-select shadow-none border-1 border-secondary rounded-3 py-2">
+                        <option>Premium Cotton Tee ($12.50 base)</option>
+                        <option>Classic Hoodie ($24.00 base)</option>
+                        <option>Ceramic Mug ($5.50 base)</option>
+                    </select>
                 </div>
 
-                <label class="form-label text-muted small text-uppercase fw-bold">Price Markup</label>
-                <div class="input-group mb-4">
-                    <span class="input-group-text bg-light">$</span>
-                    <input type="text" class="form-control shadow-none border-light-subtle" value="24.99">
+                <div class="mb-4">
+                    <label class="form-label text-muted small text-uppercase fw-bold">Available Colors</label>
+                    <div class="d-flex flex-wrap gap-2">
+                        <div class="color-swatch active" style="background: #1a1a1a;"></div>
+                        <div class="color-swatch" style="background: #ffffff; border: 1px solid #ccc;"></div>
+                        <div class="color-swatch" style="background: #dc3545;"></div>
+                        <div class="color-swatch" style="background: #0d6efd;"></div>
+                        <div class="color-swatch" style="background: #ffc107;"></div>
+                    </div>
                 </div>
-                
-                <p class="text-success small fw-bold mt-2">Estimated Profit: $7.50 / item</p>
+
+                <div class="mb-4">
+                    <label class="form-label text-muted small text-uppercase fw-bold">Pricing & Markup</label>
+                    <div class="input-group mb-2">
+                        <span class="input-group-text bg-light border-light-subtle">Retail $</span>
+                        <input type="number" class="form-control shadow-none border-light-subtle" value="24.99">
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mt-2 px-1">
+                        <span class="small text-muted">Base Cost: $12.50</span>
+                        <span class="small fw-bold text-success">Profit: $12.49</span>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <label class="form-label text-muted small text-uppercase fw-bold">Product Title</label>
+                    <input type="text" class="form-control shadow-none border-secondary rounded-3" placeholder="e.g., Neon Vibes Tee">
+                </div>
             </div>
         </div>
     </div>
