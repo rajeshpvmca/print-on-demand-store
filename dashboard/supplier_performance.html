@@ -6,56 +6,95 @@
     <title>Performance Metrics</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="../css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <style>
-        body { background-color: #f8f9fa; padding: 2rem; font-family: 'Inter', sans-serif; }
+        body { background-color: #f8f9fa; padding: 1.5rem; font-family: 'Inter', sans-serif; overflow-x: hidden; }
         .page-title { font-family: 'Montserrat', sans-serif; font-weight: 700; color: var(--primary-color); }
-        .stat-card { background: #fff; border-radius: 16px; border: none; box-shadow: 0 4px 15px rgba(0,0,0,0.05); padding: 1.5rem; }
-        .chart-container { background: #fff; border-radius: 16px; padding: 1.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        
+        .stat-card { background: #fff; border-radius: 16px; border: none; box-shadow: 0 4px 15px rgba(0,0,0,0.03); padding: 1.5rem; display: flex; align-items: center; gap: 15px; }
+        .stat-icon { width: 55px; height: 55px; border-radius: 12px; display: flex; justify-content: center; align-items: center; font-size: 1.8rem; flex-shrink: 0; }
+        
+        .chart-container { background: #fff; border-radius: 16px; padding: 1.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.03); height: 100%; }
+
+        @media (max-width: 576px) {
+            body { padding: 1rem; }
+            .stat-card { flex-direction: row; padding: 1.2rem; }
+            .stat-icon { width: 45px; height: 45px; font-size: 1.5rem; }
+            .stat-card h3 { font-size: 1.5rem !important; }
+            .chart-container { padding: 1rem; }
+        }
     </style>
 </head>
 <body>
-    <h2 class="page-title mb-4">Performance Metrics</h2>
+    <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+        <h2 class="page-title mb-0">Performance Metrics</h2>
+        <select class="form-select w-auto shadow-none rounded-pill" style="font-size: 0.9rem;">
+            <option>Last 7 Days</option>
+            <option>Last 30 Days</option>
+            <option>This Quarter</option>
+        </select>
+    </div>
     
-    <div class="row g-4 mb-4">
-        <div class="col-md-3">
+    <div class="row g-3 g-md-4 mb-4">
+        <div class="col-12 col-md-6 col-lg-3">
             <div class="stat-card">
-                <p class="text-muted small text-uppercase fw-bold mb-1">Avg Fulfillment Time</p>
-                <h3 class="fw-bold mb-0 text-success">1.8 Days</h3>
+                <div class="stat-icon" style="background: rgba(25, 135, 84, 0.1); color: #198754;">
+                    <span class="material-symbols-outlined">schedule</span>
+                </div>
+                <div>
+                    <p class="text-muted small text-uppercase fw-bold mb-1">Avg Fulfillment</p>
+                    <h3 class="fw-bold mb-0 text-dark">1.8 Days</h3>
+                </div>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-12 col-md-6 col-lg-3">
             <div class="stat-card">
-                <p class="text-muted small text-uppercase fw-bold mb-1">Defect Rate</p>
-                <h3 class="fw-bold mb-0" style="color: var(--primary-color);">0.4%</h3>
+                <div class="stat-icon" style="background: rgba(220, 53, 69, 0.1); color: #dc3545;">
+                    <span class="material-symbols-outlined">gpp_bad</span>
+                </div>
+                <div>
+                    <p class="text-muted small text-uppercase fw-bold mb-1">Defect Rate</p>
+                    <h3 class="fw-bold mb-0 text-dark">0.4%</h3>
+                </div>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-12 col-md-6 col-lg-3">
             <div class="stat-card">
-                <p class="text-muted small text-uppercase fw-bold mb-1">On-Time Shipping</p>
-                <h3 class="fw-bold mb-0 text-dark">98.2%</h3>
+                <div class="stat-icon" style="background: rgba(13, 110, 253, 0.1); color: #0d6efd;">
+                    <span class="material-symbols-outlined">local_shipping</span>
+                </div>
+                <div>
+                    <p class="text-muted small text-uppercase fw-bold mb-1">On-Time Ship</p>
+                    <h3 class="fw-bold mb-0 text-dark">98.2%</h3>
+                </div>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-12 col-md-6 col-lg-3">
             <div class="stat-card">
-                <p class="text-muted small text-uppercase fw-bold mb-1">Volume (30 Days)</p>
-                <h3 class="fw-bold mb-0 text-dark">12.4K Items</h3>
+                <div class="stat-icon" style="background: rgba(106, 17, 203, 0.1); color: var(--primary-color);">
+                    <span class="material-symbols-outlined">inventory_2</span>
+                </div>
+                <div>
+                    <p class="text-muted small text-uppercase fw-bold mb-1">Volume Processed</p>
+                    <h3 class="fw-bold mb-0 text-dark">12.4K</h3>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="row g-4">
-        <div class="col-md-6">
+    <div class="row g-3 g-md-4">
+        <div class="col-12 col-xl-6">
             <div class="chart-container">
-                <h5 class="fw-bold mb-4 text-dark">Fulfillment Speed Trend</h5>
-                <div id="speedChart"></div>
+                <h5 class="fw-bold mb-4 text-dark">Fulfillment Speed Trend (Days)</h5>
+                <div id="speedChart" style="min-height: 300px;"></div>
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-12 col-xl-6">
             <div class="chart-container">
-                <h5 class="fw-bold mb-4 text-dark">Production Volume (Daily)</h5>
-                <div id="volumeChart"></div>
+                <h5 class="fw-bold mb-4 text-dark">Daily Production Volume</h5>
+                <div id="volumeChart" style="min-height: 300px;"></div>
             </div>
         </div>
     </div>
@@ -63,19 +102,34 @@
     <script>
         var speedOptions = {
             series: [{ name: 'Days to Ship', data: [2.5, 2.1, 2.0, 1.9, 1.8, 1.8, 1.7] }],
-            chart: { type: 'line', height: 350, toolbar: { show: false }, fontFamily: 'Inter, sans-serif' },
+            chart: { type: 'area', height: '100%', minHeight: 300, toolbar: { show: false }, fontFamily: 'Inter, sans-serif' },
             colors: ['#6a11cb'],
+            fill: { type: 'gradient', gradient: { shadeIntensity: 1, opacityFrom: 0.5, opacityTo: 0.1, stops: [0, 90, 100] } },
             stroke: { width: 4, curve: 'smooth' },
-            xaxis: { categories: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'] }
+            dataLabels: { enabled: false },
+            xaxis: { 
+                categories: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                labels: { style: { colors: '#6c757d' } }
+            },
+            yaxis: { labels: { style: { colors: '#6c757d' } } },
+            grid: { borderColor: '#f1f1f1', strokeDashArray: 4 },
+            theme: { mode: 'light' }
         };
         new ApexCharts(document.querySelector("#speedChart"), speedOptions).render();
 
         var volumeOptions = {
             series: [{ name: 'Items Printed', data: [400, 450, 420, 500, 600, 550, 410] }],
-            chart: { type: 'bar', height: 350, toolbar: { show: false }, fontFamily: 'Inter, sans-serif' },
-            colors: ['#c18a39'],
-            plotOptions: { bar: { borderRadius: 4 } },
-            xaxis: { categories: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'] }
+            chart: { type: 'bar', height: '100%', minHeight: 300, toolbar: { show: false }, fontFamily: 'Inter, sans-serif' },
+            colors: ['#2575fc'],
+            plotOptions: { bar: { borderRadius: 6, columnWidth: '40%' } },
+            dataLabels: { enabled: false },
+            xaxis: { 
+                categories: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                labels: { style: { colors: '#6c757d' } }
+            },
+            yaxis: { labels: { style: { colors: '#6c757d' } } },
+            grid: { borderColor: '#f1f1f1', strokeDashArray: 4 },
+            theme: { mode: 'light' }
         };
         new ApexCharts(document.querySelector("#volumeChart"), volumeOptions).render();
     </script>
