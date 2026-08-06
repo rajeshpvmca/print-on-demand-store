@@ -6,53 +6,125 @@
     <title>Spending Analytics</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="../css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <style>
-        body { background-color: #f8f9fa; padding: 2rem; font-family: 'Inter', sans-serif; }
+        body { background-color: #f8f9fa; padding: 1.5rem; font-family: 'Inter', sans-serif; overflow-x: hidden; }
         .page-title { font-family: 'Montserrat', sans-serif; font-weight: 700; color: var(--primary-color); }
-        .stat-card { background: #fff; border-radius: 16px; border: none; box-shadow: 0 4px 15px rgba(0,0,0,0.05); padding: 1.5rem; }
-        .chart-container { background: #fff; border-radius: 16px; padding: 1.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-top: 1.5rem; }
+        
+        .stat-card { background: #fff; border-radius: 16px; border: none; box-shadow: 0 4px 15px rgba(0,0,0,0.03); padding: 1.5rem; display: flex; align-items: center; gap: 15px; }
+        .stat-icon { width: 50px; height: 50px; border-radius: 12px; display: flex; justify-content: center; align-items: center; font-size: 1.5rem; flex-shrink: 0; }
+        
+        .chart-container { background: #fff; border-radius: 16px; padding: 1.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.03); margin-top: 1.5rem; }
+        
+        .recent-table th { font-size: 0.8rem; letter-spacing: 1px; color: #6c757d; }
+        
+        @media (max-width: 576px) {
+            body { padding: 1rem; }
+            .stat-card { flex-direction: row; padding: 1rem; }
+            .stat-card h3 { font-size: 1.25rem !important; }
+            .chart-container { padding: 1rem; }
+            .table-responsive { margin-top: 1rem; border-radius: 12px; }
+        }
     </style>
 </head>
 <body>
     <h2 class="page-title mb-4">Spending Analytics</h2>
     
-    <div class="row g-4">
-        <div class="col-md-4">
+    <div class="row g-3 g-md-4">
+        <div class="col-12 col-md-4">
             <div class="stat-card">
-                <p class="text-muted small text-uppercase fw-bold mb-1">Total Spent</p>
-                <h3 class="fw-bold mb-0" style="color: var(--primary-color);">$1,245.50</h3>
+                <div class="stat-icon" style="background: rgba(106, 17, 203, 0.1); color: var(--primary-color);">
+                    <span class="material-symbols-outlined">account_balance_wallet</span>
+                </div>
+                <div>
+                    <p class="text-muted small text-uppercase fw-bold mb-1">Total Spent</p>
+                    <h3 class="fw-bold mb-0" style="color: var(--primary-color);">$1,245.50</h3>
+                </div>
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-12 col-md-4">
             <div class="stat-card">
-                <p class="text-muted small text-uppercase fw-bold mb-1">Orders Placed</p>
-                <h3 class="fw-bold mb-0 text-dark">18</h3>
+                <div class="stat-icon" style="background: rgba(25, 135, 84, 0.1); color: #198754;">
+                    <span class="material-symbols-outlined">loyalty</span>
+                </div>
+                <div>
+                    <p class="text-muted small text-uppercase fw-bold mb-1">Saved via Promo</p>
+                    <h3 class="fw-bold mb-0 text-success">$85.20</h3>
+                </div>
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-12 col-md-4">
             <div class="stat-card">
-                <p class="text-muted small text-uppercase fw-bold mb-1">Saved via Discounts</p>
-                <h3 class="fw-bold mb-0 text-success">$85.20</h3>
+                <div class="stat-icon" style="background: rgba(13, 110, 253, 0.1); color: #0d6efd;">
+                    <span class="material-symbols-outlined">stars</span>
+                </div>
+                <div>
+                    <p class="text-muted small text-uppercase fw-bold mb-1">Stackly Rewards</p>
+                    <h3 class="fw-bold mb-0 text-primary">1,240 Pts</h3>
+                </div>
             </div>
         </div>
     </div>
 
     <div class="chart-container">
-        <h5 class="fw-bold mb-4 text-dark">Monthly Spending</h5>
-        <div id="spendingChart"></div>
+        <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+            <h5 class="fw-bold text-dark mb-0">Spending History (2026)</h5>
+            <select class="form-select w-auto shadow-none rounded-pill" style="font-size: 0.85rem;">
+                <option>This Year</option>
+                <option>Last 6 Months</option>
+                <option>All Time</option>
+            </select>
+        </div>
+        <div id="spendingChart" style="min-height: 300px;"></div>
+    </div>
+
+    <div class="chart-container mt-4">
+        <h5 class="fw-bold mb-4 text-dark">Recent Transactions</h5>
+        <div class="table-responsive">
+            <table class="table table-hover align-middle mb-0">
+                <thead class="table-light">
+                    <tr>
+                        <th class="text-uppercase">Date</th>
+                        <th class="text-uppercase">Order ID</th>
+                        <th class="text-uppercase">Items</th>
+                        <th class="text-uppercase text-end">Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-muted">Oct 24, 2026</td>
+                        <td class="fw-bold text-dark">#ORD-9021</td>
+                        <td>Premium Cotton Tee (x2)</td>
+                        <td class="fw-bold text-end">$49.98</td>
+                    </tr>
+                    <tr>
+                        <td class="text-muted">Oct 15, 2026</td>
+                        <td class="fw-bold text-dark">#ORD-8942</td>
+                        <td>Ceramic Coffee Mug (x1)</td>
+                        <td class="fw-bold text-end">$14.99</td>
+                    </tr>
+                    <tr>
+                        <td class="text-muted">Sep 02, 2026</td>
+                        <td class="fw-bold text-dark">#ORD-8109</td>
+                        <td>Custom Canvas Art (x1)</td>
+                        <td class="fw-bold text-end">$120.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 
     <script>
         var options = {
             series: [{
                 name: 'Spending ($)',
-                data: [45, 120, 85, 210, 150, 320, 180, 240, 190]
+                data: [45, 120, 85, 210, 150, 320, 180, 240, 190, 65]
             }],
             chart: {
                 type: 'area',
-                height: 350,
+                height: 320,
                 toolbar: { show: false },
                 fontFamily: 'Inter, sans-serif'
             },
@@ -69,7 +141,20 @@
             dataLabels: { enabled: false },
             stroke: { curve: 'smooth', width: 3 },
             xaxis: {
-                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+                labels: {
+                    style: { colors: '#6c757d' }
+                }
+            },
+            yaxis: {
+                labels: {
+                    formatter: function (value) { return "$" + value; },
+                    style: { colors: '#6c757d' }
+                }
+            },
+            grid: {
+                borderColor: '#f1f1f1',
+                strokeDashArray: 4,
             },
             theme: { mode: 'light' }
         };

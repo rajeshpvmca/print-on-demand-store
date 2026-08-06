@@ -9,58 +9,121 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="../css/style.css">
     <style>
-        body { background-color: #f8f9fa; padding: 2rem; font-family: 'Inter', sans-serif; }
+        body { background-color: #f8f9fa; padding: 1.5rem; font-family: 'Inter', sans-serif; overflow-x: hidden; }
         .page-title { font-family: 'Montserrat', sans-serif; font-weight: 700; color: var(--primary-color); }
-        .order-card { background: #fff; border-radius: 16px; border: none; box-shadow: 0 4px 15px rgba(0,0,0,0.02); }
-        .status-badge { padding: 6px 12px; border-radius: 50px; font-weight: 600; font-size: 0.8rem; }
+        
+        .order-tabs { display: flex; gap: 15px; border-bottom: 2px solid #dee2e6; margin-bottom: 2rem; overflow-x: auto; scrollbar-width: none; }
+        .order-tabs::-webkit-scrollbar { display: none; }
+        .order-tab { font-weight: 600; padding: 0.5rem 1rem; color: #6c757d; cursor: pointer; border-bottom: 3px solid transparent; white-space: nowrap; transition: all 0.3s ease; }
+        .order-tab.active, .order-tab:hover { color: var(--primary-color); border-bottom-color: var(--primary-color); }
+
+        .order-card { background: #fff; border-radius: 16px; border: none; box-shadow: 0 4px 15px rgba(0,0,0,0.03); margin-bottom: 1.5rem; overflow: hidden; }
+        .order-header { background: #fdfdfd; padding: 1rem 1.5rem; border-bottom: 1px solid #f1f1f1; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+        .order-body { padding: 1.5rem; }
+        
+        .status-badge { padding: 6px 16px; border-radius: 50px; font-weight: 700; font-size: 0.8rem; display: inline-flex; align-items: center; gap: 5px; }
         .status-processing { background: rgba(106, 17, 203, 0.1); color: var(--primary-color); }
         .status-shipped { background: rgba(25, 135, 84, 0.1); color: #198754; }
         .status-delivered { background: rgba(13, 110, 253, 0.1); color: #0d6efd; }
+        
+        .item-img { width: 80px; height: 80px; object-fit: cover; border-radius: 8px; background: #e9ecef; }
+
+        @media (max-width: 576px) {
+            body { padding: 1rem; }
+            .order-header { flex-direction: column; }
+            .order-header > div { width: 100%; display: flex; justify-content: space-between; }
+            .item-details { flex-direction: column; gap: 10px; }
+            .action-buttons { width: 100%; display: flex; gap: 10px; margin-top: 15px; }
+            .action-buttons button { flex: 1; }
+        }
     </style>
 </head>
 <body>
     <h2 class="page-title mb-4">My Orders</h2>
-    <div class="order-card p-4">
-        <div class="table-responsive">
-            <table class="table table-hover align-middle">
-                <thead>
-                    <tr>
-                        <th class="text-muted small text-uppercase">Order ID</th>
-                        <th class="text-muted small text-uppercase">Date</th>
-                        <th class="text-muted small text-uppercase">Items</th>
-                        <th class="text-muted small text-uppercase">Total</th>
-                        <th class="text-muted small text-uppercase">Status</th>
-                        <th class="text-muted small text-uppercase text-end">Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="fw-bold">#ORD-9021</td>
-                        <td>Oct 24, 2026</td>
-                        <td>2x Premium Tee</td>
-                        <td class="fw-bold">$49.98</td>
-                        <td><span class="status-badge status-processing">Processing</span></td>
-                        <td class="text-end"><button class="btn btn-sm btn-outline-secondary rounded-pill">Track</button></td>
-                    </tr>
-                    <tr>
-                        <td class="fw-bold">#ORD-8942</td>
-                        <td>Oct 15, 2026</td>
-                        <td>1x Ceramic Mug</td>
-                        <td class="fw-bold">$14.99</td>
-                        <td><span class="status-badge status-shipped">Shipped</span></td>
-                        <td class="text-end"><button class="btn btn-sm btn-outline-secondary rounded-pill">Track</button></td>
-                    </tr>
-                    <tr>
-                        <td class="fw-bold">#ORD-8109</td>
-                        <td>Sep 02, 2026</td>
-                        <td>1x Custom Canvas</td>
-                        <td class="fw-bold">$89.00</td>
-                        <td><span class="status-badge status-delivered">Delivered</span></td>
-                        <td class="text-end"><button class="btn btn-sm btn-outline-secondary rounded-pill">Invoice</button></td>
-                    </tr>
-                </tbody>
-            </table>
+    
+    <div class="order-tabs">
+        <div class="order-tab active">All Orders</div>
+        <div class="order-tab">Processing</div>
+        <div class="order-tab">Shipped</div>
+        <div class="order-tab">Delivered</div>
+        <div class="order-tab">Cancelled</div>
+    </div>
+
+    <!-- Order 1: Processing -->
+    <div class="order-card">
+        <div class="order-header">
+            <div>
+                <span class="text-muted small text-uppercase fw-bold d-block">Order Placed</span>
+                <span class="fw-bold text-dark">Oct 24, 2026</span>
+            </div>
+            <div>
+                <span class="text-muted small text-uppercase fw-bold d-block">Total</span>
+                <span class="fw-bold text-dark">$49.98</span>
+            </div>
+            <div>
+                <span class="text-muted small text-uppercase fw-bold d-block">Order ID</span>
+                <span class="fw-bold text-dark">#ORD-9021</span>
+            </div>
+            <div class="text-end ms-auto">
+                <span class="status-badge status-processing"><span class="material-symbols-outlined fs-6">autorenew</span> Processing</span>
+            </div>
+        </div>
+        <div class="order-body d-flex flex-wrap align-items-center justify-content-between gap-3 item-details">
+            <div class="d-flex align-items-center gap-3 flex-grow-1">
+                <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=150&h=150&fit=crop" class="item-img" alt="Item">
+                <div>
+                    <h6 class="fw-bold mb-1">Premium Cotton Tee (x2)</h6>
+                    <p class="text-muted small mb-1">Color: Black | Size: L</p>
+                    <p class="text-muted small mb-0">Expected Delivery: Oct 30, 2026</p>
+                </div>
+            </div>
+            <div class="action-buttons">
+                <button class="btn btn-outline-secondary rounded-pill px-4 me-2">Cancel Order</button>
+                <button class="btn btn-primary-stackly rounded-pill px-4">Track Detail</button>
+            </div>
         </div>
     </div>
+
+    <!-- Order 2: Shipped -->
+    <div class="order-card">
+        <div class="order-header">
+            <div>
+                <span class="text-muted small text-uppercase fw-bold d-block">Order Placed</span>
+                <span class="fw-bold text-dark">Oct 15, 2026</span>
+            </div>
+            <div>
+                <span class="text-muted small text-uppercase fw-bold d-block">Total</span>
+                <span class="fw-bold text-dark">$14.99</span>
+            </div>
+            <div>
+                <span class="text-muted small text-uppercase fw-bold d-block">Order ID</span>
+                <span class="fw-bold text-dark">#ORD-8942</span>
+            </div>
+            <div class="text-end ms-auto">
+                <span class="status-badge status-shipped"><span class="material-symbols-outlined fs-6">local_shipping</span> Shipped</span>
+            </div>
+        </div>
+        <div class="order-body">
+            <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 item-details border-bottom pb-3 mb-3">
+                <div class="d-flex align-items-center gap-3 flex-grow-1">
+                    <img src="https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?w=150&h=150&fit=crop" class="item-img" alt="Item">
+                    <div>
+                        <h6 class="fw-bold mb-1">Ceramic Coffee Mug (x1)</h6>
+                        <p class="text-muted small mb-1">Color: White | Size: 11oz</p>
+                    </div>
+                </div>
+                <div class="action-buttons">
+                    <button class="btn btn-outline-secondary rounded-pill px-4">View Invoice</button>
+                    <button class="btn btn-primary-stackly rounded-pill px-4 ms-2">Track Package</button>
+                </div>
+            </div>
+            <div class="bg-light p-3 rounded-3 d-flex align-items-center gap-2">
+                <span class="material-symbols-outlined text-success">check_circle</span>
+                <span class="small fw-bold text-dark">Arriving Tomorrow by 8 PM</span>
+                <span class="small text-muted ms-auto">Tracking: UPS-1Z9999999999999999</span>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>

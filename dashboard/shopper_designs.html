@@ -9,31 +9,88 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="../css/style.css">
     <style>
-        body { background-color: #f8f9fa; padding: 2rem; font-family: 'Inter', sans-serif; }
+        body { background-color: #f8f9fa; padding: 1.5rem; font-family: 'Inter', sans-serif; overflow-x: hidden; }
         .page-title { font-family: 'Montserrat', sans-serif; font-weight: 700; color: var(--primary-color); }
-        .design-card { background: #fff; border-radius: 16px; border: 2px dashed #dee2e6; display: flex; align-items: center; justify-content: center; flex-direction: column; height: 250px; cursor: pointer; transition: all 0.3s ease; }
-        .design-card:hover { border-color: var(--primary-color); background: rgba(106, 17, 203, 0.02); }
-        .design-item { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        
+        .design-card { background: #fff; border-radius: 16px; border: 2px dashed #dee2e6; display: flex; align-items: center; justify-content: center; flex-direction: column; height: 100%; min-height: 250px; cursor: pointer; transition: all 0.3s ease; text-align: center; padding: 20px; }
+        .design-card:hover { border-color: var(--primary-color); background: rgba(106, 17, 203, 0.02); transform: translateY(-5px); }
+        
+        .design-item { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.04); transition: transform 0.3s ease; height: 100%; display: flex; flex-direction: column; }
+        .design-item:hover { transform: translateY(-5px); box-shadow: 0 12px 25px rgba(106, 17, 203, 0.1); }
+        
+        .design-img { height: 180px; object-fit: cover; width: 100%; border-bottom: 1px solid #f1f1f1; }
+        .status-tag { position: absolute; top: 10px; left: 10px; padding: 4px 12px; border-radius: 50px; font-size: 0.75rem; font-weight: 700; }
+        .tag-draft { background: rgba(255,193,7,0.9); color: #000; }
+        .tag-published { background: rgba(25,135,84,0.9); color: #fff; }
+
+        @media (max-width: 576px) {
+            body { padding: 1rem; }
+            .design-card { min-height: 180px; }
+            .design-img { height: 140px; }
+            .action-group { flex-direction: column; gap: 8px !important; }
+            .action-group button { width: 100% !important; }
+        }
     </style>
 </head>
 <body>
-    <h2 class="page-title mb-4">My Saved Designs</h2>
-    <div class="row g-4">
-        <!-- New Design -->
-        <div class="col-md-4 col-lg-3">
+    <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+        <h2 class="page-title mb-0">My Saved Designs</h2>
+        <div class="position-relative">
+            <input type="text" class="form-control rounded-pill px-4 shadow-none border-1 border-secondary" placeholder="Search designs..." style="width: 200px;">
+        </div>
+    </div>
+
+    <div class="row g-3 g-md-4">
+        <!-- Create New -->
+        <div class="col-6 col-md-4 col-xl-3">
             <div class="design-card text-muted">
-                <span class="material-symbols-outlined fs-1 mb-2">add_circle</span>
-                <span class="fw-bold">Create New Design</span>
+                <span class="material-symbols-outlined mb-2" style="font-size: 3rem; color: var(--primary-color);">add_circle</span>
+                <span class="fw-bold text-dark">Create New Design</span>
+                <p class="small mt-2 mb-0">Start from a blank canvas or template</p>
             </div>
         </div>
-        <!-- Existing Design -->
-        <div class="col-md-4 col-lg-3">
+        
+        <!-- Existing Design 1 -->
+        <div class="col-6 col-md-4 col-xl-3">
             <div class="design-item position-relative">
-                <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=300&fit=crop" class="w-100" style="height: 180px; object-fit: cover;" alt="Design">
-                <div class="p-3">
-                    <h6 class="fw-bold mb-1">Company Logo Tee</h6>
-                    <p class="text-muted small mb-2">Last edited: 2 days ago</p>
-                    <div class="d-flex gap-2">
+                <span class="status-tag tag-draft shadow-sm">Draft</span>
+                <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=300&fit=crop" class="design-img" alt="Design">
+                <div class="p-3 d-flex flex-column flex-grow-1">
+                    <h6 class="fw-bold mb-1 text-truncate">Company Logo Tee</h6>
+                    <p class="text-muted small mb-3">Updated 2 days ago</p>
+                    <div class="mt-auto d-flex gap-2 action-group">
+                        <button class="btn btn-sm btn-outline-secondary w-50 rounded-pill"><span class="material-symbols-outlined fs-6 align-middle">edit</span> Edit</button>
+                        <button class="btn btn-sm btn-primary-stackly w-50 rounded-pill">Order</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Existing Design 2 -->
+        <div class="col-6 col-md-4 col-xl-3">
+            <div class="design-item position-relative">
+                <span class="status-tag tag-published shadow-sm">Printed</span>
+                <img src="https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?w=400&h=300&fit=crop" class="design-img" alt="Design">
+                <div class="p-3 d-flex flex-column flex-grow-1">
+                    <h6 class="fw-bold mb-1 text-truncate">Coffee Lover Mug</h6>
+                    <p class="text-muted small mb-3">Updated 1 month ago</p>
+                    <div class="mt-auto d-flex gap-2 action-group">
+                        <button class="btn btn-sm btn-outline-secondary w-50 rounded-pill"><span class="material-symbols-outlined fs-6 align-middle">edit</span> Edit</button>
+                        <button class="btn btn-sm btn-primary-stackly w-50 rounded-pill">Reorder</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Existing Design 3 -->
+        <div class="col-6 col-md-4 col-xl-3 d-none d-sm-block">
+            <div class="design-item position-relative">
+                <span class="status-tag tag-draft shadow-sm">Draft</span>
+                <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?w=400&h=300&fit=crop" class="design-img" alt="Design">
+                <div class="p-3 d-flex flex-column flex-grow-1">
+                    <h6 class="fw-bold mb-1 text-truncate">Eco Campaign Bag</h6>
+                    <p class="text-muted small mb-3">Updated just now</p>
+                    <div class="mt-auto d-flex gap-2 action-group">
                         <button class="btn btn-sm btn-outline-secondary w-50 rounded-pill"><span class="material-symbols-outlined fs-6 align-middle">edit</span> Edit</button>
                         <button class="btn btn-sm btn-primary-stackly w-50 rounded-pill">Order</button>
                     </div>
