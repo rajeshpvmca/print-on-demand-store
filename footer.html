@@ -1,57 +1,89 @@
 <!-- footer.html -->
-<footer class="footer-custom pt-5">
-    <div class="container">
+<footer class="footer-custom pt-5 position-relative">
+    <div class="container pb-4">
         <div class="row g-4 mb-5">
-            <div class="col-lg-4 col-md-6">
-                <div class="mb-3">
+            <!-- Column 1: Brand & Socials -->
+            <div class="col-lg-4 col-md-12 mb-4 mb-lg-0 pe-lg-4">
+                <div class="mb-4">
                     <a class="navbar-brand position-relative" style="z-index: 1060;" href="index.html">
-                    <div style="-webkit-mask: url('assets/images/logoStackly.webp') no-repeat center left; -webkit-mask-size: contain; mask: url('assets/images/logoStackly.webp') no-repeat center left; mask-size: contain; background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%); width: 160px; height: 40px;"
-                        aria-label="Stackly Logo"></div>
-                </a>
+                        <div style="-webkit-mask: url('assets/images/logoStackly.webp') no-repeat center left; -webkit-mask-size: contain; mask: url('assets/images/logoStackly.webp') no-repeat center left; mask-size: contain; background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%); width: 140px; height: 35px;" aria-label="Stackly Logo"></div>
+                    </a>
                 </div>
-                
-                <p class="mb-4 text-muted">We bring your unique ideas to life. Premium print-on-demand services for
-                    creators, businesses, and everyone in between. Design it, we print it.</p>
-                <div class="d-flex">
+                <p class="mb-4 text-light opacity-75 small lh-lg" style="max-width: 320px;">
+                    Create and sell high-quality custom apparel, accessories, and home decor instantly. No inventory, no hassle—just pure creativity printed on demand.
+                </p>
+                <div class="d-flex gap-1">
                     <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
                     <a href="#" class="social-icon"><i class="bi bi-twitter-x"></i></a>
                     <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
                     <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
                 </div>
             </div>
-            <div class="col-lg-2 col-md-6 col-6">
-                <h5 class="footer-title">Quick Links</h5>
-                <a href="index.html" class="footer-link">Home</a>
-                <a href="about.html" class="footer-link">About Us</a>
-                <a href="services.html" class="footer-link">Services</a>
-                <a href="portfolio.html" class="footer-link">Portfolio</a>
-                <a href="contact.html" class="footer-link">Contact</a>
+
+            <!-- Column 2: Quick Links -->
+            <div class="col-lg-2 col-md-4 col-6 mb-4 mb-md-0">
+                <h5 class="text-white fw-bold mb-4" style="font-family: 'Montserrat', sans-serif;">Quick Links</h5>
+                <ul class="list-unstyled mb-0">
+                    <li class="mb-3"><a href="about.html" class="footer-link">About Us</a></li>
+                    <li class="mb-3"><a href="services.html" class="footer-link">Services</a></li>
+                    <li class="mb-3"><a href="products.html" class="footer-link">Products</a></li>
+                    <li class="mb-3"><a href="portfolio.html" class="footer-link">Portfolio</a></li>
+                    <li class="mb-3"><a href="blog.html" class="footer-link">Blog</a></li>
+                    <li><a href="contact.html" class="footer-link">Contact</a></li>
+                </ul>
             </div>
-            <div class="col-lg-2 col-md-6 col-6">
-                <h5 class="footer-title">Resources</h5>
-                <a href="products.html" class="footer-link">Products Catalog</a>
-                <a href="pricing.html" class="footer-link">Pricing</a>
-                <a href="blog.html" class="footer-link">Design Blog</a>
-                <a href="faq.html" class="footer-link">Help Center / FAQs</a>
-                <a href="#" class="footer-link">Terms of Service</a>
+
+            <!-- Column 3: Contact -->
+            <div class="col-lg-3 col-md-4 col-6 mb-4 mb-md-0">
+                <h5 class="text-white fw-bold mb-4" style="font-family: 'Montserrat', sans-serif;">Contact</h5>
+                <ul class="list-unstyled mb-0 text-muted small">
+                    <li class="mb-4 d-flex align-items-start">
+                        <i class="bi bi-geo-alt me-3 mt-1 text-light"></i>
+                        <a href="https://maps.google.com/?q=MMR+Complex,+Chinna+Thirupathi,+Salem,+Tamil+Nadu+636008" target="_blank" class="text-light text-decoration-none hover-text-white transition-all lh-base">
+                            MMR Complex, Chinna Thirupathi,<br>Salem, Tamil Nadu 636008
+                        </a>
+                    </li>
+                    <li class="mb-4 d-flex align-items-center">
+                        <i class="bi bi-envelope me-3 text-light"></i>
+                        <a href="mailto:contact@stackly.com" class="text-light text-decoration-none hover-text-white transition-all">
+                            contact@stackly.com
+                        </a>
+                    </li>
+                    <li class="d-flex align-items-center">
+                        <i class="bi bi-telephone me-3 text-light"></i>
+                        <a href="tel:+919876543210" class="text-light text-decoration-none hover-text-white transition-all">
+                            +91 9876543210
+                        </a>
+                    </li>
+                </ul>
             </div>
-            <div class="col-lg-4 col-md-6">
-                <h5 class="footer-title">Newsletter</h5>
-                <p class="text-muted mb-3">Subscribe to get the latest design tips, new product announcements, and
-                    exclusive discounts.</p>
-                <form class="d-flex mt-3 flex-column flex-sm-row gap-2">
-                    <input type="email" class="form-control bg-dark border-secondary text-light px-4 py-2"
-                        placeholder="Your Email Address" required>
-                    <button class="btn btn-primary-stackly px-4" type="submit">Subscribe</button>
+
+            <!-- Column 4: Newsletter -->
+            <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
+                <h5 class="text-white fw-bold mb-4" style="font-family: 'Montserrat', sans-serif;">Newsletter</h5>
+                <p class="text-light small mb-4 lh-base">
+                    Subscribe to our newsletter to receive the latest updates, industry insights, and news.
+                </p>
+                <form class="d-flex flex-column gap-3">
+                    <div class="position-relative">
+                        <i class="bi bi-envelope position-absolute text-white-50" style="left: 15px; top: 50%; transform: translateY(-50%);"></i>
+                        <input type="email" class="form-control bg-transparent text-light border-secondary newsletter-input" placeholder="Enter your email address" style="padding-left: 45px; border-radius: 8px;" required>
+                    </div>
+                    <button class="btn btn-primary-stackly w-100 fw-bold d-flex align-items-center justify-content-center py-2" type="submit" style="border-radius: 8px;">
+                        Subscribe Now <i class="bi bi-chevron-right ms-2 fs-6" style="font-size: 0.8rem !important;"></i>
+                    </button>
                 </form>
             </div>
         </div>
-        <div class="row pt-4 border-top border-secondary mt-4">
+
+        <!-- Bottom Bar -->
+        <div class="row pt-4 mt-2" style="border-top: 1px solid rgba(255,255,255,0.1);">
             <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                <p class="mb-0 text-muted">&copy; 2026 Stackly Custom Stores. All rights reserved.</p>
+                <p class="mb-0 text-light small">&copy; 2026 Stackly All Rights Reserved.</p>
             </div>
             <div class="col-md-6 text-center text-md-end">
-                <p class="mb-0 text-muted">Crafted with passion for creators.</p>
+                <a href="#" class="text-light small text-decoration-none me-3 hover-text-white transition-all">Privacy Policy</a>
+                <a href="#" class="text-light small text-decoration-none hover-text-white transition-all">Terms of Service</a>
             </div>
         </div>
     </div>

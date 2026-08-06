@@ -849,3 +849,43 @@ h1, h2, h3, h4, h5, h6 {
         padding-bottom: 1rem;
     }
 }
+
+/* Footer Newsletter Placeholder Visibility */
+.newsletter-input::placeholder {
+    color: rgba(255, 255, 255, 0.6) !important;
+    opacity: 1;
+}
+.newsletter-input:focus {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    color: white !important;
+}
+
+/* White Animated Button */
+.btn-white-animated {
+    background-color: #ffffff;
+    color: var(--primary-color) !important;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    border: none;
+}
+.btn-white-animated::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: var(--dark-bg);
+    z-index: -1;
+    transition: width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.btn-white-animated:hover {
+    color: #ffffff !important;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0, 0.25) !important;
+}
+.btn-white-animated:hover::before {
+    width: 100%;
+}
