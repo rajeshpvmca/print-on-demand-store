@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -279,21 +280,24 @@
     </section>
 
     <!-- Section 7: Services Highlight -->
-    <section class="py-0 overflow-hidden">
-        <div class="row g-0">
-            <div class="col-lg-6">
-                <img src="assets/images/services.webp" alt="Printing Process" class="w-100 h-100" style="object-fit: cover; min-height: 400px;">
-            </div>
-            <div class="col-lg-6 bg-gradient-custom text-white d-flex align-items-center p-5 p-lg-5">
-                <div class="p-lg-4">
-                    <h2 class="fw-bold mb-4">Premium Print Quality Guaranteed</h2>
-                    <p class="lead opacity-75 mb-4">We invest in the latest Direct-to-Garment (DTG), sublimation, and UV printing technologies to ensure your designs look exactly as intended.</p>
-                    <ul class="list-unstyled mb-5">
-                        <li class="mb-3 d-flex align-items-center"><i class="bi bi-check-circle-fill me-3 fs-4 text-warning"></i> <span>Eco-friendly water-based inks</span></li>
-                        <li class="mb-3 d-flex align-items-center"><i class="bi bi-check-circle-fill me-3 fs-4 text-warning"></i> <span>Strict quality control process</span></li>
-                        <li class="mb-3 d-flex align-items-center"><i class="bi bi-check-circle-fill me-3 fs-4 text-warning"></i> <span>Durable and wash-safe prints</span></li>
-                    </ul>
-                    <a href="services.html" class="btn btn-primary-stackly fw-bold rounded-pill px-4 py-2">Learn About Our Services</a>
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-0 rounded-5 overflow-hidden shadow-lg" style="transition: transform 0.3s ease;">
+                <div class="col-lg-6">
+                    <img src="assets/images/services.webp" alt="Printing Process" class="w-100 h-100" style="object-fit: cover; min-height: 450px;">
+                </div>
+                <div class="col-lg-6 bg-gradient-custom text-white d-flex align-items-center p-5">
+                    <div class="p-lg-4">
+                        <span class="badge bg-warning text-dark mb-3 px-3 py-2 rounded-pill fw-bold">Highest Standard</span>
+                        <h2 class="fw-bold mb-4 display-6">Premium Print Quality Guaranteed</h2>
+                        <p class="lead opacity-75 mb-4">We invest in the latest Direct-to-Garment (DTG), sublimation, and UV printing technologies to ensure your designs look exactly as intended.</p>
+                        <ul class="list-unstyled mb-5">
+                            <li class="mb-3 d-flex align-items-center"><span class="material-symbols-outlined me-3 fs-4 text-warning">check_circle</span> <span class="fw-medium">Eco-friendly water-based inks</span></li>
+                            <li class="mb-3 d-flex align-items-center"><span class="material-symbols-outlined me-3 fs-4 text-warning">verified</span> <span class="fw-medium">Strict quality control process</span></li>
+                            <li class="mb-3 d-flex align-items-center"><span class="material-symbols-outlined me-3 fs-4 text-warning">water_drop</span> <span class="fw-medium">Durable and wash-safe prints</span></li>
+                        </ul>
+                        <a href="services.html" class="btn btn-light fw-bold rounded-pill px-4 py-3 shadow-sm text-dark hover-lift" style="color: var(--primary-color) !important;">Learn About Our Services</a>
+                    </div>
                 </div>
             </div>
         </div>

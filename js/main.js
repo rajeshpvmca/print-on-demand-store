@@ -95,15 +95,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 prevEl: '.swiper-button-prev',
             },
             on: {
-                slideChangeTransitionStart: function () {
-                    // Briefly remove and re-add aos-animate class to re-trigger animations
+                slideChange: function () {
+                    // Remove animation class from all slides immediately when slide starts changing
+                    this.slides.forEach(slide => {
+                        slide.querySelectorAll('[data-aos]').forEach(el => {
+                            el.classList.remove('aos-animate');
+                        });
+                    });
+                },
+                slideChangeTransitionEnd: function () {
+                    // Add animation class to the newly active slide when transition finishes
                     const activeSlide = this.slides[this.activeIndex];
                     const animatedElements = activeSlide.querySelectorAll('[data-aos]');
                     animatedElements.forEach(el => {
-                        el.classList.remove('aos-animate');
-                        setTimeout(() => {
-                            el.classList.add('aos-animate');
-                        }, 50);
+                        el.classList.add('aos-animate');
                     });
                 }
             }
