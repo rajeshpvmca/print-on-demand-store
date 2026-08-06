@@ -1,91 +1,137 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Stackly - Custom Print-on-Demand Store</title>
     <!-- Bootstrap 5.3.3 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+        rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet" />
 </head>
-<body class="overflow-x-hidden">
 
+<body class="overflow-x-hidden">
     <!-- Section 1: Header Placeholder -->
     <div id="header-placeholder"></div>
-
     <!-- Section 2: Hero Section (Slider) -->
     <section class="hero-section p-0">
         <!-- Swiper -->
         <div class="swiper heroSwiper">
             <div class="swiper-wrapper">
                 <!-- Slide 1 -->
-                <div class="swiper-slide position-relative d-flex align-items-center justify-content-center" style="min-height: 100vh; overflow: hidden; padding-top: 80px;">
+                <div class="swiper-slide position-relative d-flex align-items-center justify-content-center"
+                    style="min-height: 100vh; overflow: hidden; padding-top: 80px;">
                     <div class="bg-image-zoom" style="background-image: url('assets/images/hero.webp');"></div>
-                    <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark" style="opacity: 0.7; z-index: 1;"></div>
+                    <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark" style="opacity: 0.7; z-index: 1;">
+                    </div>
                     <div class="container position-relative d-flex justify-content-center" style="z-index: 2;">
                         <div class="text-center text-white mx-2" style="max-width: 800px; width: 100%;">
-                            <div class="badge bg-white text-dark rounded-pill px-4 py-2 mb-4 shadow-lg" data-aos="flip-up" data-aos-delay="200" style="font-weight: 700; font-size: 0.95rem; letter-spacing: 1px;">🌟 THE FUTURE OF PRINT-ON-DEMAND</div>
-                            <h1 class="display-3 fw-bold mb-4 text-white" data-aos="zoom-in-up" data-aos-delay="300" style="letter-spacing: -1px; text-shadow: 0 4px 20px rgba(0,0,0,0.7);">Bring Your Unique Ideas to <span class="text-gradient-animated">Life</span></h1>
-                            <p class="lead text-light mb-5 px-md-4" data-aos="fade-up" data-aos-delay="400" style="font-size: 1.2rem; font-weight: 500; text-shadow: 0 2px 10px rgba(0,0,0,0.7);">Design, sell, and print high-quality custom apparel, accessories, and home decor. No inventory, no hassle, just pure creativity.</p>
-                            <div class="d-flex flex-column flex-sm-row justify-content-center gap-3" data-aos="fade-up" data-aos-delay="500">
-                                <a href="products.html" class="btn btn-primary-stackly btn-lg shadow-lg fw-bold px-5 py-3 rounded-pill">Start Designing</a>
-                                <a href="how-it-works.html" class="btn btn-secondary-stackly text-white border-white btn-lg fw-bold px-5 py-3 rounded-pill"><i class="bi bi-play-circle-fill me-2"></i>How it works</a>
+                            <div class="badge bg-white text-dark rounded-pill px-4 py-2 mb-4 shadow-lg"
+                                data-aos="flip-up" data-aos-delay="200"
+                                style="font-weight: 700; font-size: 0.95rem; letter-spacing: 1px;">🌟 THE FUTURE OF
+                                PRINT-ON-DEMAND</div>
+                            <h1 class="display-3 fw-bold mb-4 text-white" data-aos="zoom-in-up" data-aos-delay="300"
+                                style="letter-spacing: -1px; text-shadow: 0 4px 20px rgba(0,0,0,0.7);">Bring Your Unique
+                                Ideas to <span class="text-gradient-animated">Life</span></h1>
+                            <p class="lead text-light mb-5 px-md-4" data-aos="fade-up" data-aos-delay="400"
+                                style="font-size: 1.2rem; font-weight: 500; text-shadow: 0 2px 10px rgba(0,0,0,0.7);">
+                                Design, sell, and print high-quality custom apparel, accessories, and home decor. No
+                                inventory, no hassle, just pure creativity.</p>
+                            <div class="d-flex flex-column flex-sm-row justify-content-center gap-3" data-aos="fade-up"
+                                data-aos-delay="500">
+                                <a class="btn btn-primary-stackly btn-lg shadow-lg fw-bold px-5 py-3 rounded-pill"
+                                    href="404.html" onclick="window.top.location.href='404.html'">Start
+                                    Designing</a>
+                                <a class="btn btn-secondary-stackly text-white border-white btn-lg fw-bold px-5 py-3 rounded-pill"
+                                    href="404.html" onclick="window.top.location.href='404.html'"><i
+                                        class="bi bi-play-circle-fill me-2"></i>How it works</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Slide 2 -->
-                <div class="swiper-slide position-relative d-flex align-items-center justify-content-center" style="min-height: 100vh; overflow: hidden; padding-top: 80px;">
+                <div class="swiper-slide position-relative d-flex align-items-center justify-content-center"
+                    style="min-height: 100vh; overflow: hidden; padding-top: 80px;">
                     <div class="bg-image-zoom" style="background-image: url('assets/images/about.webp');"></div>
-                    <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark" style="opacity: 0.7; z-index: 1;"></div>
+                    <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark" style="opacity: 0.7; z-index: 1;">
+                    </div>
                     <div class="container position-relative d-flex justify-content-center" style="z-index: 2;">
                         <div class="text-center text-white mx-2" style="max-width: 800px; width: 100%;">
-                            <div class="badge bg-white text-dark rounded-pill px-4 py-2 mb-4 shadow-lg" data-aos="flip-up" data-aos-delay="200" style="font-weight: 700; font-size: 0.95rem; letter-spacing: 1px;">🚀 SCALE GLOBALLY</div>
-                            <h1 class="display-3 fw-bold mb-4 text-white" data-aos="zoom-in-up" data-aos-delay="300" style="letter-spacing: -1px; text-shadow: 0 4px 20px rgba(0,0,0,0.7);">Launch Your Brand <span class="text-gradient-animated">Instantly</span></h1>
-                            <p class="lead text-light mb-5 px-md-4" data-aos="fade-up" data-aos-delay="400" style="font-size: 1.2rem; font-weight: 500; text-shadow: 0 2px 10px rgba(0,0,0,0.7);">Connect to Shopify, Etsy, and WooCommerce in one click. We automate fulfillment so you can focus entirely on scaling your empire.</p>
-                            <div class="d-flex flex-column flex-sm-row justify-content-center gap-3" data-aos="fade-up" data-aos-delay="500">
-                                <a href="services.html" class="btn btn-primary-stackly btn-lg shadow-lg fw-bold px-5 py-3 rounded-pill">Explore Integrations</a>
+                            <div class="badge bg-white text-dark rounded-pill px-4 py-2 mb-4 shadow-lg"
+                                data-aos="flip-up" data-aos-delay="200"
+                                style="font-weight: 700; font-size: 0.95rem; letter-spacing: 1px;">🚀 SCALE GLOBALLY
+                            </div>
+                            <h1 class="display-3 fw-bold mb-4 text-white" data-aos="zoom-in-up" data-aos-delay="300"
+                                style="letter-spacing: -1px; text-shadow: 0 4px 20px rgba(0,0,0,0.7);">Launch Your Brand
+                                <span class="text-gradient-animated">Instantly</span>
+                            </h1>
+                            <p class="lead text-light mb-5 px-md-4" data-aos="fade-up" data-aos-delay="400"
+                                style="font-size: 1.2rem; font-weight: 500; text-shadow: 0 2px 10px rgba(0,0,0,0.7);">
+                                Connect to Shopify, Etsy, and WooCommerce in one click. We automate fulfillment so you
+                                can focus entirely on scaling your empire.</p>
+                            <div class="d-flex flex-column flex-sm-row justify-content-center gap-3" data-aos="fade-up"
+                                data-aos-delay="500">
+                                <a class="btn btn-primary-stackly btn-lg shadow-lg fw-bold px-5 py-3 rounded-pill"
+                                    href="404.html" onclick="window.top.location.href='404.html'">Explore
+                                    Integrations</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Slide 3 -->
-                <div class="swiper-slide position-relative d-flex align-items-center justify-content-center" style="min-height: 100vh; overflow: hidden; padding-top: 80px;">
+                <div class="swiper-slide position-relative d-flex align-items-center justify-content-center"
+                    style="min-height: 100vh; overflow: hidden; padding-top: 80px;">
                     <div class="bg-image-zoom" style="background-image: url('assets/images/services.webp');"></div>
-                    <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark" style="opacity: 0.7; z-index: 1;"></div>
+                    <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark" style="opacity: 0.7; z-index: 1;">
+                    </div>
                     <div class="container position-relative d-flex justify-content-center" style="z-index: 2;">
                         <div class="text-center text-white mx-2" style="max-width: 800px; width: 100%;">
-                            <div class="badge bg-white text-dark rounded-pill px-4 py-2 mb-4 shadow-lg" data-aos="flip-up" data-aos-delay="200" style="font-weight: 700; font-size: 0.95rem; letter-spacing: 1px;">💎 UNMATCHED QUALITY</div>
-                            <h1 class="display-3 fw-bold mb-4 text-white" data-aos="zoom-in-up" data-aos-delay="300" style="letter-spacing: -1px; text-shadow: 0 4px 20px rgba(0,0,0,0.7);">Premium Prints <span class="text-gradient-animated">Guaranteed</span></h1>
-                            <p class="lead text-light mb-5 px-md-4" data-aos="fade-up" data-aos-delay="400" style="font-size: 1.2rem; font-weight: 500; text-shadow: 0 2px 10px rgba(0,0,0,0.7);">Utilizing state-of-the-art DTG and sublimation technology with eco-friendly inks to deliver vibrant, wash-safe products every time.</p>
-                            <div class="d-flex flex-column flex-sm-row justify-content-center gap-3" data-aos="fade-up" data-aos-delay="500">
-                                <a href="portfolio.html" class="btn btn-primary-stackly btn-lg shadow-lg fw-bold px-5 py-3 rounded-pill">View Our Quality</a>
+                            <div class="badge bg-white text-dark rounded-pill px-4 py-2 mb-4 shadow-lg"
+                                data-aos="flip-up" data-aos-delay="200"
+                                style="font-weight: 700; font-size: 0.95rem; letter-spacing: 1px;">💎 UNMATCHED QUALITY
+                            </div>
+                            <h1 class="display-3 fw-bold mb-4 text-white" data-aos="zoom-in-up" data-aos-delay="300"
+                                style="letter-spacing: -1px; text-shadow: 0 4px 20px rgba(0,0,0,0.7);">Premium Prints
+                                <span class="text-gradient-animated">Guaranteed</span>
+                            </h1>
+                            <p class="lead text-light mb-5 px-md-4" data-aos="fade-up" data-aos-delay="400"
+                                style="font-size: 1.2rem; font-weight: 500; text-shadow: 0 2px 10px rgba(0,0,0,0.7);">
+                                Utilizing state-of-the-art DTG and sublimation technology with eco-friendly inks to
+                                deliver vibrant, wash-safe products every time.</p>
+                            <div class="d-flex flex-column flex-sm-row justify-content-center gap-3" data-aos="fade-up"
+                                data-aos-delay="500">
+                                <a class="btn btn-primary-stackly btn-lg shadow-lg fw-bold px-5 py-3 rounded-pill"
+                                    href="404.html" onclick="window.top.location.href='404.html'">View Our
+                                    Quality</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-           
         </div>
     </section>
-
     <!-- Section 3: Platform Highlights / Metrics -->
     <section class="py-5 position-relative border-bottom" style="background-color: #f8faff;">
         <div class="container">
             <div class="row g-4 justify-content-center">
                 <!-- Highlight 1 -->
                 <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
-                    <div class="metric-card hover-primary bg-white rounded-4 p-4 text-center h-100 shadow-sm border-0 position-relative overflow-hidden">
-                        <div class="icon-wrapper mx-auto mb-3 d-flex align-items-center justify-content-center rounded-circle bg-primary-soft" style="width: 64px; height: 64px;">
+                    <div
+                        class="metric-card hover-primary bg-white rounded-4 p-4 text-center h-100 shadow-sm border-0 position-relative overflow-hidden">
+                        <div class="icon-wrapper mx-auto mb-3 d-flex align-items-center justify-content-center rounded-circle bg-primary-soft"
+                            style="width: 64px; height: 64px;">
                             <i class="bi bi-box-seam fs-2 text-primary-custom"></i>
                         </div>
                         <h2 class="fw-bold mb-1 display-6 text-dark">900+</h2>
@@ -94,8 +140,10 @@
                 </div>
                 <!-- Highlight 2 -->
                 <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="200">
-                    <div class="metric-card hover-secondary bg-white rounded-4 p-4 text-center h-100 shadow-sm border-0 position-relative overflow-hidden">
-                        <div class="icon-wrapper mx-auto mb-3 d-flex align-items-center justify-content-center rounded-circle bg-secondary-soft" style="width: 64px; height: 64px;">
+                    <div
+                        class="metric-card hover-secondary bg-white rounded-4 p-4 text-center h-100 shadow-sm border-0 position-relative overflow-hidden">
+                        <div class="icon-wrapper mx-auto mb-3 d-flex align-items-center justify-content-center rounded-circle bg-secondary-soft"
+                            style="width: 64px; height: 64px;">
                             <i class="bi bi-globe fs-2 text-secondary-custom"></i>
                         </div>
                         <h2 class="fw-bold mb-1 display-6 text-dark">110+</h2>
@@ -104,8 +152,10 @@
                 </div>
                 <!-- Highlight 3 -->
                 <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="300">
-                    <div class="metric-card hover-accent bg-white rounded-4 p-4 text-center h-100 shadow-sm border-0 position-relative overflow-hidden">
-                        <div class="icon-wrapper mx-auto mb-3 d-flex align-items-center justify-content-center rounded-circle" style="width: 64px; height: 64px; background: rgba(255, 0, 122, 0.1);">
+                    <div
+                        class="metric-card hover-accent bg-white rounded-4 p-4 text-center h-100 shadow-sm border-0 position-relative overflow-hidden">
+                        <div class="icon-wrapper mx-auto mb-3 d-flex align-items-center justify-content-center rounded-circle"
+                            style="width: 64px; height: 64px; background: rgba(255, 0, 122, 0.1);">
                             <i class="bi bi-piggy-bank fs-2" style="color: var(--accent-color);"></i>
                         </div>
                         <h2 class="fw-bold mb-1 display-6 text-dark">100%</h2>
@@ -114,8 +164,10 @@
                 </div>
                 <!-- Highlight 4 -->
                 <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="400">
-                    <div class="metric-card hover-dark bg-white rounded-4 p-4 text-center h-100 shadow-sm border-0 position-relative overflow-hidden">
-                        <div class="icon-wrapper mx-auto mb-3 d-flex align-items-center justify-content-center rounded-circle" style="width: 64px; height: 64px; background: rgba(33, 37, 41, 0.05);">
+                    <div
+                        class="metric-card hover-dark bg-white rounded-4 p-4 text-center h-100 shadow-sm border-0 position-relative overflow-hidden">
+                        <div class="icon-wrapper mx-auto mb-3 d-flex align-items-center justify-content-center rounded-circle"
+                            style="width: 64px; height: 64px; background: rgba(33, 37, 41, 0.05);">
                             <i class="bi bi-headset fs-2 text-dark"></i>
                         </div>
                         <h2 class="fw-bold mb-1 display-6 text-dark">24/7</h2>
@@ -125,196 +177,239 @@
             </div>
         </div>
     </section>
-
     <!-- Section 4: Features / Why Choose Us -->
     <section class="py-5 position-relative" style="background-color: #ffffff;">
         <div class="container">
             <div class="text-center mb-5 pb-3">
                 <h2 class="section-title fw-bold" data-aos="fade-up">Why Choose Stackly?</h2>
-                <p class="text-muted lead max-w-700 mx-auto mt-3" data-aos="fade-up" data-aos-delay="100">We handle everything from printing to shipping, so you can focus on what you do best: creating amazing designs.</p>
+                <p class="text-muted lead max-w-700 mx-auto mt-3" data-aos="fade-up" data-aos-delay="100">We handle
+                    everything from printing to shipping, so you can focus on what you do best: creating amazing
+                    designs.</p>
             </div>
             <div class="row g-4">
                 <!-- Feature 1 -->
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="metric-card hover-primary bg-white rounded-4 p-5 text-center h-100 shadow-sm border-0 position-relative overflow-hidden">
-                        <div class="icon-wrapper mx-auto mb-4 d-flex align-items-center justify-content-center rounded-circle bg-primary-soft" style="width: 80px; height: 80px;">
+                    <div
+                        class="metric-card hover-primary bg-white rounded-4 p-5 text-center h-100 shadow-sm border-0 position-relative overflow-hidden">
+                        <div class="icon-wrapper mx-auto mb-4 d-flex align-items-center justify-content-center rounded-circle bg-primary-soft"
+                            style="width: 80px; height: 80px;">
                             <i class="bi bi-rocket-takeoff display-5 text-primary-custom"></i>
                         </div>
                         <h4 class="mb-3 fw-bold text-dark">Fast Fulfillment</h4>
-                        <p class="text-muted mb-0" style="font-size: 1.05rem;">90% of our orders are produced and shipped within 2-3 business days globally.</p>
+                        <p class="text-muted mb-0" style="font-size: 1.05rem;">90% of our orders are produced and
+                            shipped within 2-3 business days globally.</p>
                     </div>
                 </div>
                 <!-- Feature 2 -->
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="metric-card hover-secondary bg-white rounded-4 p-5 text-center h-100 shadow-sm border-0 position-relative overflow-hidden">
-                        <div class="icon-wrapper mx-auto mb-4 d-flex align-items-center justify-content-center rounded-circle bg-secondary-soft" style="width: 80px; height: 80px;">
+                    <div
+                        class="metric-card hover-secondary bg-white rounded-4 p-5 text-center h-100 shadow-sm border-0 position-relative overflow-hidden">
+                        <div class="icon-wrapper mx-auto mb-4 d-flex align-items-center justify-content-center rounded-circle bg-secondary-soft"
+                            style="width: 80px; height: 80px;">
                             <i class="bi bi-palette display-5 text-secondary-custom"></i>
                         </div>
                         <h4 class="mb-3 fw-bold text-dark">Vibrant Prints</h4>
-                        <p class="text-muted mb-0" style="font-size: 1.05rem;">State-of-the-art DTG printing technology ensures your colors pop and last wash after wash.</p>
+                        <p class="text-muted mb-0" style="font-size: 1.05rem;">State-of-the-art DTG printing technology
+                            ensures your colors pop and last wash after wash.</p>
                     </div>
                 </div>
                 <!-- Feature 3 -->
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
-                    <div class="metric-card hover-accent bg-white rounded-4 p-5 text-center h-100 shadow-sm border-0 position-relative overflow-hidden">
-                        <div class="icon-wrapper mx-auto mb-4 d-flex align-items-center justify-content-center rounded-circle" style="width: 80px; height: 80px; background: rgba(255, 0, 122, 0.1);">
+                    <div
+                        class="metric-card hover-accent bg-white rounded-4 p-5 text-center h-100 shadow-sm border-0 position-relative overflow-hidden">
+                        <div class="icon-wrapper mx-auto mb-4 d-flex align-items-center justify-content-center rounded-circle"
+                            style="width: 80px; height: 80px; background: rgba(255, 0, 122, 0.1);">
                             <i class="bi bi-globe2 display-5" style="color: var(--accent-color);"></i>
                         </div>
                         <h4 class="mb-3 fw-bold text-dark">Global Shipping</h4>
-                        <p class="text-muted mb-0" style="font-size: 1.05rem;">Partnered with top-tier carriers to deliver your custom products to customers worldwide.</p>
+                        <p class="text-muted mb-0" style="font-size: 1.05rem;">Partnered with top-tier carriers to
+                            deliver your custom products to customers worldwide.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Section 5: Featured Product Categories -->
     <section class="py-5 bg-dark-custom position-relative overflow-hidden">
         <!-- Decorative element -->
-        <div class="position-absolute top-0 end-0 rounded-circle bg-gradient-custom opacity-10" style="width: 400px; height: 400px; transform: translate(30%, -30%);"></div>
-        <div class="position-absolute bottom-0 start-0 rounded-circle bg-gradient-custom opacity-10" style="width: 300px; height: 300px; transform: translate(-30%, 30%);"></div>
-        
+        <div class="position-absolute top-0 end-0 rounded-circle bg-gradient-custom opacity-10"
+            style="width: 400px; height: 400px; transform: translate(30%, -30%);"></div>
+        <div class="position-absolute bottom-0 start-0 rounded-circle bg-gradient-custom opacity-10"
+            style="width: 300px; height: 300px; transform: translate(-30%, 30%);"></div>
         <div class="container position-relative z-index-1">
             <div class="d-flex justify-content-between align-items-end mb-5">
                 <div>
                     <h2 class="section-title text-light mb-3">Trending Products</h2>
                     <p class="text-light opacity-75 lead mb-0">Discover our most popular customizable items.</p>
                 </div>
-                <a href="products.html" class="btn btn-secondary-stackly text-white border-white d-none d-md-block rounded-pill px-4 py-2">View All Catalog</a>
+                <a class="btn btn-secondary-stackly text-white border-white d-none d-md-block rounded-pill px-4 py-2"
+                    href="404.html" onclick="window.top.location.href='404.html'">View All Catalog</a>
             </div>
-            
             <div class="row g-4">
                 <div class="col-lg-3 col-md-6">
-                    <div class="card bg-transparent border-secondary h-100 text-center p-4 product-cat-card" style="border-radius: 20px; transition: all 0.3s;">
+                    <div class="card bg-transparent border-secondary h-100 text-center p-4 product-cat-card"
+                        style="border-radius: 20px; transition: all 0.3s;">
                         <i class="bi bi-bag-heart display-1 text-primary-custom mb-3"></i>
-                        <h4 class="text-light mb-2">T-Shirts & Apparel</h4>
+                        <h4 class="text-light mb-2">T-Shirts &amp; Apparel</h4>
                         <p class="text-light opacity-50 small mb-4">Premium cotton, all sizes</p>
-                        <a href="products.html" class="btn btn-sm btn-primary-stackly">Design Now</a>
+                        <a class="btn btn-sm btn-primary-stackly" href="404.html"
+                            onclick="window.top.location.href='404.html'">Design Now</a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <div class="card bg-transparent border-secondary h-100 text-center p-4 product-cat-card" style="border-radius: 20px; transition: all 0.3s;">
+                    <div class="card bg-transparent border-secondary h-100 text-center p-4 product-cat-card"
+                        style="border-radius: 20px; transition: all 0.3s;">
                         <i class="bi bi-cup-hot display-1 text-secondary-custom mb-3"></i>
-                        <h4 class="text-light mb-2">Mugs & Drinkware</h4>
+                        <h4 class="text-light mb-2">Mugs &amp; Drinkware</h4>
                         <p class="text-light opacity-50 small mb-4">Ceramic, Enamel, Tumblers</p>
-                        <a href="products.html" class="btn btn-sm btn-primary-stackly">Design Now</a>
+                        <a class="btn btn-sm btn-primary-stackly" href="404.html"
+                            onclick="window.top.location.href='404.html'">Design Now</a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <div class="card bg-transparent border-secondary h-100 text-center p-4 product-cat-card" style="border-radius: 20px; transition: all 0.3s;">
+                    <div class="card bg-transparent border-secondary h-100 text-center p-4 product-cat-card"
+                        style="border-radius: 20px; transition: all 0.3s;">
                         <i class="bi bi-phone display-1 text-primary-custom mb-3"></i>
                         <h4 class="text-light mb-2">Tech Accessories</h4>
                         <p class="text-light opacity-50 small mb-4">Phone cases, laptop sleeves</p>
-                        <a href="products.html" class="btn btn-sm btn-primary-stackly">Design Now</a>
+                        <a class="btn btn-sm btn-primary-stackly" href="404.html"
+                            onclick="window.top.location.href='404.html'">Design Now</a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <div class="card bg-transparent border-secondary h-100 text-center p-4 product-cat-card" style="border-radius: 20px; transition: all 0.3s;">
+                    <div class="card bg-transparent border-secondary h-100 text-center p-4 product-cat-card"
+                        style="border-radius: 20px; transition: all 0.3s;">
                         <i class="bi bi-house-door display-1 text-secondary-custom mb-3"></i>
-                        <h4 class="text-light mb-2">Home & Living</h4>
+                        <h4 class="text-light mb-2">Home &amp; Living</h4>
                         <p class="text-light opacity-50 small mb-4">Posters, Canvas, Pillows</p>
-                        <a href="products.html" class="btn btn-sm btn-primary-stackly">Design Now</a>
+                        <a class="btn btn-sm btn-primary-stackly" href="404.html"
+                            onclick="window.top.location.href='404.html'">Design Now</a>
                     </div>
                 </div>
             </div>
             <div class="text-center mt-4 d-md-none">
-                <a href="products.html" class="btn btn-secondary-stackly text-white border-white rounded-pill px-4 py-2 w-100">View All Catalog</a>
+                <a class="btn btn-secondary-stackly text-white border-white rounded-pill px-4 py-2 w-100"
+                    href="404.html" onclick="window.top.location.href='404.html'">View All Catalog</a>
             </div>
         </div>
     </section>
-
     <!-- Section 6: How It Works -->
     <section class="py-5 position-relative" style="background-color: #f8faff;">
         <div class="container position-relative z-index-2">
             <div class="text-center mb-5 pb-2">
                 <h2 class="section-title fw-bold" data-aos="fade-up">How It Works</h2>
-                <p class="text-muted lead max-w-700 mx-auto mt-3" data-aos="fade-up" data-aos-delay="100">Start your print-on-demand journey in four simple steps.</p>
+                <p class="text-muted lead max-w-700 mx-auto mt-3" data-aos="fade-up" data-aos-delay="100">Start your
+                    print-on-demand journey in four simple steps.</p>
             </div>
-            
             <div class="row g-4 position-relative pt-4 pb-4">
                 <!-- Connecting Dashed Line (Desktop Only) -->
-                <div class="d-none d-md-block position-absolute" style="top: 24px; left: 12.5%; width: 75%; height: 0; border-top: 4px dashed rgba(106, 17, 203, 0.15); z-index: 0;"></div>
-
+                <div class="d-none d-md-block position-absolute"
+                    style="top: 24px; left: 12.5%; width: 75%; height: 0; border-top: 4px dashed rgba(106, 17, 203, 0.15); z-index: 0;">
+                </div>
                 <!-- Step 1 -->
                 <div class="col-md-3 mt-5 mt-md-0" data-aos="fade-up" data-aos-delay="200">
-                    <div class="step-card-modern hover-primary bg-white p-4 pt-5 rounded-4 shadow-sm position-relative h-100 text-center border">
-                        <div class="step-icon-float shadow-lg d-flex align-items-center justify-content-center fw-bold display-6 rounded-circle position-absolute top-0 start-50 translate-middle text-primary-custom bg-white transition-all" style="width: 80px; height: 80px; border: 5px solid #fff;">
+                    <div
+                        class="step-card-modern hover-primary bg-white p-4 pt-5 rounded-4 shadow-sm position-relative h-100 text-center border">
+                        <div class="step-icon-float shadow-lg d-flex align-items-center justify-content-center fw-bold display-6 rounded-circle position-absolute top-0 start-50 translate-middle text-primary-custom bg-white transition-all"
+                            style="width: 80px; height: 80px; border: 5px solid #fff;">
                             1
                         </div>
                         <h5 class="fw-bold mb-3 mt-3 text-dark">Create Account</h5>
-                        <p class="text-muted mb-0 small" style="font-size: 0.95rem;">Sign up for free and effortlessly connect your favorite ecommerce store.</p>
+                        <p class="text-muted mb-0 small" style="font-size: 0.95rem;">Sign up for free and effortlessly
+                            connect your favorite ecommerce store.</p>
                     </div>
                 </div>
                 <!-- Step 2 -->
                 <div class="col-md-3 mt-5 mt-md-0" data-aos="fade-up" data-aos-delay="300">
-                    <div class="step-card-modern hover-secondary bg-white p-4 pt-5 rounded-4 shadow-sm position-relative h-100 text-center border">
-                        <div class="step-icon-float shadow-lg d-flex align-items-center justify-content-center fw-bold display-6 rounded-circle position-absolute top-0 start-50 translate-middle text-secondary-custom bg-white transition-all" style="width: 80px; height: 80px; border: 5px solid #fff;">
+                    <div
+                        class="step-card-modern hover-secondary bg-white p-4 pt-5 rounded-4 shadow-sm position-relative h-100 text-center border">
+                        <div class="step-icon-float shadow-lg d-flex align-items-center justify-content-center fw-bold display-6 rounded-circle position-absolute top-0 start-50 translate-middle text-secondary-custom bg-white transition-all"
+                            style="width: 80px; height: 80px; border: 5px solid #fff;">
                             2
                         </div>
                         <h5 class="fw-bold mb-3 mt-3 text-dark">Upload Design</h5>
-                        <p class="text-muted mb-0 small" style="font-size: 0.95rem;">Use our mockup generator to apply your art to over 900+ products.</p>
+                        <p class="text-muted mb-0 small" style="font-size: 0.95rem;">Use our mockup generator to apply
+                            your art to over 900+ products.</p>
                     </div>
                 </div>
                 <!-- Step 3 -->
                 <div class="col-md-3 mt-5 mt-md-0" data-aos="fade-up" data-aos-delay="400">
-                    <div class="step-card-modern hover-accent bg-white p-4 pt-5 rounded-4 shadow-sm position-relative h-100 text-center border">
-                        <div class="step-icon-float shadow-lg d-flex align-items-center justify-content-center fw-bold display-6 rounded-circle position-absolute top-0 start-50 translate-middle bg-white transition-all" style="width: 80px; height: 80px; color: var(--accent-color); border: 5px solid #fff;">
+                    <div
+                        class="step-card-modern hover-accent bg-white p-4 pt-5 rounded-4 shadow-sm position-relative h-100 text-center border">
+                        <div class="step-icon-float shadow-lg d-flex align-items-center justify-content-center fw-bold display-6 rounded-circle position-absolute top-0 start-50 translate-middle bg-white transition-all"
+                            style="width: 80px; height: 80px; color: var(--accent-color); border: 5px solid #fff;">
                             3
                         </div>
                         <h5 class="fw-bold mb-3 mt-3 text-dark">Publish Products</h5>
-                        <p class="text-muted mb-0 small" style="font-size: 0.95rem;">Push the designed products to your store with your own custom pricing.</p>
+                        <p class="text-muted mb-0 small" style="font-size: 0.95rem;">Push the designed products to your
+                            store with your own custom pricing.</p>
                     </div>
                 </div>
                 <!-- Step 4 -->
                 <div class="col-md-3 mt-5 mt-md-0" data-aos="fade-up" data-aos-delay="500">
-                    <div class="step-card-modern hover-dark bg-white p-4 pt-5 rounded-4 shadow-sm position-relative h-100 text-center border">
-                        <div class="step-icon-float shadow-lg d-flex align-items-center justify-content-center fw-bold display-6 rounded-circle position-absolute top-0 start-50 translate-middle bg-white transition-all" style="width: 80px; height: 80px; color: var(--dark-bg); border: 5px solid #fff;">
+                    <div
+                        class="step-card-modern hover-dark bg-white p-4 pt-5 rounded-4 shadow-sm position-relative h-100 text-center border">
+                        <div class="step-icon-float shadow-lg d-flex align-items-center justify-content-center fw-bold display-6 rounded-circle position-absolute top-0 start-50 translate-middle bg-white transition-all"
+                            style="width: 80px; height: 80px; color: var(--dark-bg); border: 5px solid #fff;">
                             4
                         </div>
-                        <h5 class="fw-bold mb-3 mt-3 text-dark">We Print & Ship</h5>
-                        <p class="text-muted mb-0 small" style="font-size: 0.95rem;">When a customer buys, we automatically fulfill and ship the order.</p>
+                        <h5 class="fw-bold mb-3 mt-3 text-dark">We Print &amp; Ship</h5>
+                        <p class="text-muted mb-0 small" style="font-size: 0.95rem;">When a customer buys, we
+                            automatically fulfill and ship the order.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Section 7: Services Highlight -->
     <section class="py-5">
         <div class="container">
             <div class="row g-0 rounded-5 overflow-hidden shadow-lg" style="transition: transform 0.3s ease;">
                 <div class="col-lg-6">
-                    <img src="assets/images/services.webp" alt="Printing Process" class="w-100 h-100" style="object-fit: cover; min-height: 450px;">
+                    <img alt="Printing Process" class="w-100 h-100" src="assets/images/services.webp"
+                        style="object-fit: cover; min-height: 450px;" />
                 </div>
                 <div class="col-lg-6 bg-gradient-custom text-white d-flex align-items-center p-5">
                     <div class="p-lg-4">
-                        <span class="badge bg-warning text-dark mb-3 px-3 py-2 rounded-pill fw-bold">Highest Standard</span>
+                        <span class="badge bg-warning text-dark mb-3 px-3 py-2 rounded-pill fw-bold">Highest
+                            Standard</span>
                         <h2 class="fw-bold mb-4 display-6">Premium Print Quality Guaranteed</h2>
-                        <p class="lead opacity-75 mb-4">We invest in the latest Direct-to-Garment (DTG), sublimation, and UV printing technologies to ensure your designs look exactly as intended.</p>
+                        <p class="lead opacity-75 mb-4">We invest in the latest Direct-to-Garment (DTG), sublimation,
+                            and UV printing technologies to ensure your designs look exactly as intended.</p>
                         <ul class="list-unstyled mb-5">
-                            <li class="mb-3 d-flex align-items-center"><span class="material-symbols-outlined me-3 fs-4 text-warning">check_circle</span> <span class="fw-medium">Eco-friendly water-based inks</span></li>
-                            <li class="mb-3 d-flex align-items-center"><span class="material-symbols-outlined me-3 fs-4 text-warning">verified</span> <span class="fw-medium">Strict quality control process</span></li>
-                            <li class="mb-3 d-flex align-items-center"><span class="material-symbols-outlined me-3 fs-4 text-warning">water_drop</span> <span class="fw-medium">Durable and wash-safe prints</span></li>
+                            <li class="mb-3 d-flex align-items-center"><span
+                                    class="material-symbols-outlined me-3 fs-4 text-warning">check_circle</span> <span
+                                    class="fw-medium">Eco-friendly water-based inks</span></li>
+                            <li class="mb-3 d-flex align-items-center"><span
+                                    class="material-symbols-outlined me-3 fs-4 text-warning">verified</span> <span
+                                    class="fw-medium">Strict quality control process</span></li>
+                            <li class="mb-3 d-flex align-items-center"><span
+                                    class="material-symbols-outlined me-3 fs-4 text-warning">water_drop</span> <span
+                                    class="fw-medium">Durable and wash-safe prints</span></li>
                         </ul>
-                        <a href="services.html" class="btn btn-light fw-bold rounded-pill px-4 py-3 shadow-sm text-dark hover-lift" style="color: var(--primary-color) !important;">Learn About Our Services</a>
+                        <a class="btn btn-light fw-bold rounded-pill px-4 py-3 shadow-sm text-dark hover-lift"
+                            href="404.html" onclick="window.top.location.href='404.html'"
+                            style="color: var(--primary-color) !important;">Learn About Our Services</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Section 8: About Us Teaser -->
     <section class="py-5">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-5 mb-lg-0">
-                    <img src="assets/images/about.webp" alt="Our Team" class="img-fluid rounded-4 shadow-lg">
+                    <img alt="Our Team" class="img-fluid rounded-4 shadow-lg" src="assets/images/about.webp" />
                 </div>
                 <div class="col-lg-6 ps-lg-5">
                     <h6 class="text-secondary-custom fw-bold text-uppercase tracking-wide mb-2">Who We Are</h6>
                     <h2 class="fw-bold display-5 mb-4">Empowering Creators Everywhere</h2>
-                    <p class="text-muted lead mb-4">Founded in 2026, Stackly was born from a simple idea: making custom merchandise accessible to everyone without upfront costs or inventory risks.</p>
-                    <p class="text-muted mb-4">Our diverse team of engineers, designers, and printing experts work tirelessly to provide a seamless platform that bridges the gap between your creativity and physical products.</p>
+                    <p class="text-muted lead mb-4">Founded in 2026, Stackly was born from a simple idea: making custom
+                        merchandise accessible to everyone without upfront costs or inventory risks.</p>
+                    <p class="text-muted mb-4">Our diverse team of engineers, designers, and printing experts work
+                        tirelessly to provide a seamless platform that bridges the gap between your creativity and
+                        physical products.</p>
                     <div class="d-flex align-items-center mb-4">
                         <div class="me-4">
                             <h3 class="fw-bold text-primary-custom mb-0">500+</h3>
@@ -329,12 +424,12 @@
                             <span class="text-muted small">Happy Creators</span>
                         </div>
                     </div>
-                    <a href="about.html" class="btn btn-secondary-stackly">Read Our Full Story</a>
+                    <a class="btn btn-secondary-stackly" href="404.html"
+                        onclick="window.top.location.href='404.html'">Read Our Full Story</a>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Section 9: Testimonials -->
     <section class="py-5" style="background-color: #f8faff;">
         <div class="container">
@@ -347,11 +442,14 @@
                     <!-- Slide 1 -->
                     <div class="swiper-slide d-flex" style="height: auto;">
                         <div class="testimonial-card w-100 mx-2 mb-4 d-flex flex-column text-center">
-                            <img src="assets/images/img_01.webp" alt="Sarah Jenkins" class="testimonial-img">
+                            <img alt="Sarah Jenkins" class="testimonial-img" src="assets/images/img_01.webp" />
                             <div class="mb-3 text-warning mt-4">
-                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i>
                             </div>
-                            <p class="text-muted fst-italic mb-4 flex-grow-1">"Stackly completely transformed my merch business. The print quality is unmatched, and my customers love the soft t-shirts."</p>
+                            <p class="text-muted fst-italic mb-4 flex-grow-1">"Stackly completely transformed my merch
+                                business. The print quality is unmatched, and my customers love the soft t-shirts."</p>
                             <div class="mt-auto">
                                 <h6 class="fw-bold mb-0">Sarah Jenkins</h6>
                                 <span class="small text-muted">Digital Artist</span>
@@ -361,11 +459,15 @@
                     <!-- Slide 2 -->
                     <div class="swiper-slide d-flex" style="height: auto;">
                         <div class="testimonial-card w-100 mx-2 mb-4 d-flex flex-column text-center">
-                            <img src="assets/images/img_01.webp1" alt="David Chen" class="testimonial-img">
+                            <img alt="David Chen" class="testimonial-img" src="assets/images/img_01.webp1" />
                             <div class="mb-3 text-warning mt-4">
-                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i>
                             </div>
-                            <p class="text-muted fst-italic mb-4 flex-grow-1">"The integration with Shopify was seamless. I uploaded my designs and had products live in 10 minutes. Incredible service!"</p>
+                            <p class="text-muted fst-italic mb-4 flex-grow-1">"The integration with Shopify was
+                                seamless. I uploaded my designs and had products live in 10 minutes. Incredible
+                                service!"</p>
                             <div class="mt-auto">
                                 <h6 class="fw-bold mb-0">David Chen</h6>
                                 <span class="small text-muted">Streetwear Brand Owner</span>
@@ -375,11 +477,14 @@
                     <!-- Slide 3 -->
                     <div class="swiper-slide d-flex" style="height: auto;">
                         <div class="testimonial-card w-100 mx-2 mb-4 d-flex flex-column text-center">
-                            <img src="assets/images/img_04.webp" alt="Elena Rodriguez" class="testimonial-img">
+                            <img alt="Elena Rodriguez" class="testimonial-img" src="assets/images/img_04.webp" />
                             <div class="mb-3 text-warning mt-4">
-                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-half"></i>
                             </div>
-                            <p class="text-muted fst-italic mb-4 flex-grow-1">"I started my mug shop as a side hustle. Stackly's reliable fulfillment means I never have to worry about shipping times."</p>
+                            <p class="text-muted fst-italic mb-4 flex-grow-1">"I started my mug shop as a side hustle.
+                                Stackly's reliable fulfillment means I never have to worry about shipping times."</p>
                             <div class="mt-auto">
                                 <h6 class="fw-bold mb-0">Elena Rodriguez</h6>
                                 <span class="small text-muted">Etsy Seller</span>
@@ -389,11 +494,15 @@
                     <!-- Slide 4 -->
                     <div class="swiper-slide d-flex" style="height: auto;">
                         <div class="testimonial-card w-100 mx-2 mb-4 d-flex flex-column text-center">
-                            <img src="assets/images/img_05.webp" alt="Marcus Johnson" class="testimonial-img">
+                            <img alt="Marcus Johnson" class="testimonial-img" src="assets/images/img_05.webp" />
                             <div class="mb-3 text-warning mt-4">
-                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i>
                             </div>
-                            <p class="text-muted fst-italic mb-4 flex-grow-1">"The profit margins are excellent and the dashboard is incredibly intuitive. I recommend this to any creator wanting to sell merch."</p>
+                            <p class="text-muted fst-italic mb-4 flex-grow-1">"The profit margins are excellent and the
+                                dashboard is incredibly intuitive. I recommend this to any creator wanting to sell
+                                merch."</p>
                             <div class="mt-auto">
                                 <h6 class="fw-bold mb-0">Marcus Johnson</h6>
                                 <span class="small text-muted">YouTuber</span>
@@ -401,11 +510,9 @@
                         </div>
                     </div>
                 </div>
-               
             </div>
         </div>
     </section>
-
     <!-- Section 10: Latest Blog Posts -->
     <section class="py-5">
         <div class="container">
@@ -414,109 +521,138 @@
                     <h2 class="section-title mb-3">Design Insights</h2>
                     <p class="text-muted lead mb-0">Tips, trends, and tutorials for creators.</p>
                 </div>
-                <a href="blog.html" class="btn btn-secondary-stackly d-none d-md-block rounded-pill px-4">View All Articles</a>
+                <a class="btn btn-secondary-stackly d-none d-md-block rounded-pill px-4" href="404.html"
+                    onclick="window.top.location.href='404.html'">View All Articles</a>
             </div>
             <div class="row g-4">
                 <!-- Blog Card 1 -->
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card blog-card-modern h-100 border-0 rounded-4 overflow-hidden position-relative shadow-sm">
+                    <div
+                        class="card blog-card-modern h-100 border-0 rounded-4 overflow-hidden position-relative shadow-sm">
                         <div class="blog-img-wrapper position-relative overflow-hidden" style="height: 240px;">
-                            <img src="assets/images/img_27.webp" class="w-100 h-100 object-fit-cover" alt="T-Shirt Trends">
+                            <img alt="T-Shirt Trends" class="w-100 h-100 object-fit-cover"
+                                src="assets/images/img_27.webp" />
                             <div class="position-absolute top-0 start-0 m-3 z-index-2">
-                                <span class="badge bg-white text-primary-custom shadow-sm px-3 py-2 rounded-pill fw-bold">Design Tips</span>
+                                <span
+                                    class="badge bg-white text-primary-custom shadow-sm px-3 py-2 rounded-pill fw-bold">Design
+                                    Tips</span>
                             </div>
-                            <div class="blog-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
-                                <a href="#" class="btn btn-primary-stackly rounded-pill px-4 fw-bold read-more-btn">
+                            <div
+                                class="blog-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
+                                <a class="btn btn-primary-stackly rounded-pill px-4 fw-bold read-more-btn"
+                                    href="404.html" onclick="window.top.location.href='404.html'">
                                     Read Article <i class="bi bi-arrow-right ms-2"></i>
                                 </a>
                             </div>
                         </div>
                         <div class="card-body p-4 bg-white z-index-2 position-relative">
-                            <h4 class="card-title fw-bold mb-3 text-dark">Top 10 T-Shirt Color Trends for Summer 2026</h4>
-                            <p class="card-text text-muted small mb-0">Discover the color palettes that are driving sales this season and how to incorporate them into your merch.</p>
+                            <h4 class="card-title fw-bold mb-3 text-dark">Top 10 T-Shirt Color Trends for Summer 2026
+                            </h4>
+                            <p class="card-text text-muted small mb-0">Discover the color palettes that are driving
+                                sales this season and how to incorporate them into your merch.</p>
                         </div>
                     </div>
                 </div>
-                
                 <!-- Blog Card 2 -->
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                    <div class="card blog-card-modern h-100 border-0 rounded-4 overflow-hidden position-relative shadow-sm">
+                    <div
+                        class="card blog-card-modern h-100 border-0 rounded-4 overflow-hidden position-relative shadow-sm">
                         <div class="blog-img-wrapper position-relative overflow-hidden" style="height: 240px;">
-                            <img src="assets/images/img_47.webp" class="w-100 h-100 object-fit-cover" alt="Shopify Optimization">
+                            <img alt="Shopify Optimization" class="w-100 h-100 object-fit-cover"
+                                src="assets/images/img_47.webp" />
                             <div class="position-absolute top-0 start-0 m-3 z-index-2">
-                                <span class="badge bg-white text-secondary-custom shadow-sm px-3 py-2 rounded-pill fw-bold">Business</span>
+                                <span
+                                    class="badge bg-white text-secondary-custom shadow-sm px-3 py-2 rounded-pill fw-bold">Business</span>
                             </div>
-                            <div class="blog-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
-                                <a href="#" class="btn btn-secondary-stackly rounded-pill px-4 fw-bold read-more-btn">
+                            <div
+                                class="blog-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
+                                <a class="btn btn-secondary-stackly rounded-pill px-4 fw-bold read-more-btn"
+                                    href="404.html" onclick="window.top.location.href='404.html'">
                                     Read Article <i class="bi bi-arrow-right ms-2"></i>
                                 </a>
                             </div>
                         </div>
                         <div class="card-body p-4 bg-white z-index-2 position-relative">
                             <h4 class="card-title fw-bold mb-3 text-dark">How to Optimize Your Shopify Store</h4>
-                            <p class="card-text text-muted small mb-0">A complete guide to organizing collections, writing product descriptions, and improving conversion rates.</p>
+                            <p class="card-text text-muted small mb-0">A complete guide to organizing collections,
+                                writing product descriptions, and improving conversion rates.</p>
                         </div>
                     </div>
                 </div>
-                
                 <!-- Blog Card 3 -->
                 <div class="col-lg-4 col-md-6 d-none d-lg-block" data-aos="fade-up" data-aos-delay="400">
-                    <div class="card blog-card-modern h-100 border-0 rounded-4 overflow-hidden position-relative shadow-sm">
+                    <div
+                        class="card blog-card-modern h-100 border-0 rounded-4 overflow-hidden position-relative shadow-sm">
                         <div class="blog-img-wrapper position-relative overflow-hidden" style="height: 240px;">
-                            <img src="assets/images/img_40.webp" class="w-100 h-100 object-fit-cover" alt="Product Photography">
+                            <img alt="Product Photography" class="w-100 h-100 object-fit-cover"
+                                src="assets/images/img_40.webp" />
                             <div class="position-absolute top-0 start-0 m-3 z-index-2">
-                                <span class="badge bg-white text-accent-custom shadow-sm px-3 py-2 rounded-pill fw-bold" style="color: var(--accent-color);">Marketing</span>
+                                <span class="badge bg-white text-accent-custom shadow-sm px-3 py-2 rounded-pill fw-bold"
+                                    style="color: var(--accent-color);">Marketing</span>
                             </div>
-                            <div class="blog-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
-                                <a href="#" class="btn btn-secondary-stackly bg-white text-dark border-white rounded-pill px-4 fw-bold read-more-btn" style="color: var(--accent-color);">
+                            <div
+                                class="blog-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
+                                <a class="btn btn-secondary-stackly bg-white text-dark border-white rounded-pill px-4 fw-bold read-more-btn"
+                                    href="404.html" onclick="window.top.location.href='404.html'"
+                                    style="color: var(--accent-color);">
                                     Read Article <i class="bi bi-arrow-right ms-2"></i>
                                 </a>
                             </div>
                         </div>
                         <div class="card-body p-4 bg-white z-index-2 position-relative">
                             <h4 class="card-title fw-bold mb-3 text-dark">Mastering Product Photography</h4>
-                            <p class="card-text text-muted small mb-0">Learn how to make our mockups look even better with simple Photoshop techniques and lifestyle backgrounds.</p>
+                            <p class="card-text text-muted small mb-0">Learn how to make our mockups look even better
+                                with simple Photoshop techniques and lifestyle backgrounds.</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="text-center mt-4 d-md-none">
-                <a href="blog.html" class="btn btn-secondary-stackly rounded-pill px-4 py-2 w-100">View All Articles</a>
+                <a class="btn btn-secondary-stackly rounded-pill px-4 py-2 w-100" href="404.html"
+                    onclick="window.top.location.href='404.html'">View All Articles</a>
             </div>
         </div>
     </section>
-
     <!-- Section 11: Call to Action -->
     <section class="py-5 my-3 position-relative">
         <div class="container" data-aos="zoom-in" data-aos-duration="1000">
-            <div class="bg-gradient-custom rounded-5 shadow-lg position-relative overflow-hidden p-5 p-md-5 text-center text-white">
+            <div
+                class="bg-gradient-custom rounded-5 shadow-lg position-relative overflow-hidden p-5 p-md-5 text-center text-white">
                 <!-- Decorative Elements -->
-                <div class="position-absolute top-0 start-0 translate-middle rounded-circle" style="width: 300px; height: 300px; background: rgba(255,255,255,0.05); z-index: 1;"></div>
-                <div class="position-absolute bottom-0 end-0 translate-middle-x rounded-circle" style="width: 250px; height: 250px; background: rgba(255,255,255,0.08); z-index: 1; transform: translateY(30%);"></div>
-                
+                <div class="position-absolute top-0 start-0 translate-middle rounded-circle"
+                    style="width: 300px; height: 300px; background: rgba(255,255,255,0.05); z-index: 1;"></div>
+                <div class="position-absolute bottom-0 end-0 translate-middle-x rounded-circle"
+                    style="width: 250px; height: 250px; background: rgba(255,255,255,0.08); z-index: 1; transform: translateY(30%);">
+                </div>
                 <div class="position-relative" style="z-index: 2;">
-                    <span class="badge bg-white text-dark mb-3 px-3 py-2 rounded-pill fw-bold shadow-sm">🚀 Start For Free</span>
+                    <span class="badge bg-white text-dark mb-3 px-3 py-2 rounded-pill fw-bold shadow-sm">🚀 Start For
+                        Free</span>
                     <h2 class="display-4 fw-bold mb-4" style="letter-spacing: -1px;">Ready to Launch Your Brand?</h2>
                     <p class="lead opacity-75 mb-5 mx-auto" style="max-width: 650px; font-weight: 500;">
-                        Join thousands of creators who are already selling custom products with Stackly. It's free to sign up, easy to use, and requires absolutely zero inventory.
+                        Join thousands of creators who are already selling custom products with Stackly. It's free to
+                        sign up, easy to use, and requires absolutely zero inventory.
                     </p>
                     <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
-                        <a href="signup.html" class="btn btn-white-animated btn-lg fw-bold rounded-pill px-5 py-3 shadow-lg">
+                        <a class="btn btn-white-animated btn-lg fw-bold rounded-pill px-5 py-3 shadow-lg"
+                            href="404.html" onclick="window.top.location.href='404.html'">
                             Start Designing Now <i class="bi bi-arrow-right ms-2"></i>
                         </a>
                     </div>
-                    <div class="mt-4 d-flex align-items-center justify-content-center flex-wrap gap-3 gap-md-4 opacity-75 small fw-medium">
-                        <span><span class="material-symbols-outlined me-1 fs-6 text-warning align-middle">check_circle</span> No credit card required</span>
-                        <span><span class="material-symbols-outlined me-1 fs-6 text-warning align-middle">check_circle</span> Cancel anytime</span>
+                    <div
+                        class="mt-4 d-flex align-items-center justify-content-center flex-wrap gap-3 gap-md-4 opacity-75 small fw-medium">
+                        <span><span
+                                class="material-symbols-outlined me-1 fs-6 text-warning align-middle">check_circle</span>
+                            No credit card required</span>
+                        <span><span
+                                class="material-symbols-outlined me-1 fs-6 text-warning align-middle">check_circle</span>
+                            Cancel anytime</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Section 12: Footer Placeholder -->
     <div id="footer-placeholder"></div>
-
     <!-- Bootstrap 5 JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Swiper JS -->
@@ -525,7 +661,5 @@
     <script src="js/main.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
+
 </html>
-
-
-

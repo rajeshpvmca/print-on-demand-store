@@ -1,42 +1,125 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Fulfillment Queue</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="stylesheet" href="../css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+        rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
     <style>
-        body { background-color: #f8f9fa; padding: 1.5rem; font-family: 'Inter', sans-serif; overflow-x: hidden; }
-        .page-title { font-family: 'Montserrat', sans-serif; font-weight: 700; color: var(--primary-color); }
-        
-        .kanban-wrapper { display: flex; gap: 20px; overflow-x: auto; padding-bottom: 20px; scrollbar-width: none; }
-        .kanban-wrapper::-webkit-scrollbar { display: none; }
-        
-        .kanban-col { background: #e9ecef; border-radius: 12px; padding: 1rem; min-width: 320px; flex: 1; min-height: 70vh; display: flex; flex-direction: column; }
-        .kanban-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
-        
-        .kanban-card { background: #fff; border-radius: 10px; padding: 1.2rem; margin-bottom: 1rem; box-shadow: 0 4px 10px rgba(0,0,0,0.03); cursor: grab; transition: transform 0.2s ease, box-shadow 0.2s ease; border-left: 5px solid transparent; }
-        .kanban-card:hover { transform: translateY(-3px); box-shadow: 0 8px 15px rgba(0,0,0,0.08); }
-        .kanban-card:active { cursor: grabbing; }
-        
-        .card-urgent { border-left-color: #dc3545; }
-        .card-normal { border-left-color: #0d6efd; }
-        .card-done { border-left-color: #198754; }
-        
-        .sku-tag { font-family: monospace; font-size: 0.75rem; background: #f1f3f5; border: 1px solid #dee2e6; padding: 3px 8px; border-radius: 6px; color: #495057; font-weight: bold; }
-        
-        @media (max-width: 992px) {
-            .kanban-wrapper { flex-direction: column; overflow-x: visible; }
-            .kanban-col { min-width: 100%; min-height: auto; }
+        body {
+            background-color: #f8f9fa;
+            padding: 1.5rem;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
         }
+
+        .page-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .kanban-wrapper {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            padding-bottom: 20px;
+            scrollbar-width: none;
+        }
+
+        .kanban-wrapper::-webkit-scrollbar {
+            display: none;
+        }
+
+        .kanban-col {
+            background: #e9ecef;
+            border-radius: 12px;
+            padding: 1rem;
+            min-width: 320px;
+            flex: 1;
+            min-height: 70vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .kanban-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .kanban-card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 1.2rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+            cursor: grab;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            border-left: 5px solid transparent;
+        }
+
+        .kanban-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .kanban-card:active {
+            cursor: grabbing;
+        }
+
+        .card-urgent {
+            border-left-color: #dc3545;
+        }
+
+        .card-normal {
+            border-left-color: #0d6efd;
+        }
+
+        .card-done {
+            border-left-color: #198754;
+        }
+
+        .sku-tag {
+            font-family: monospace;
+            font-size: 0.75rem;
+            background: #f1f3f5;
+            border: 1px solid #dee2e6;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: #495057;
+            font-weight: bold;
+        }
+
+        @media (max-width: 992px) {
+            .kanban-wrapper {
+                flex-direction: column;
+                overflow-x: visible;
+            }
+
+            .kanban-col {
+                min-width: 100%;
+                min-height: auto;
+            }
+        }
+
         @media (max-width: 576px) {
-            body { padding: 1rem; }
+            body {
+                padding: 1rem;
+            }
         }
     </style>
 </head>
+
 <body>
     <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
         <div>
@@ -45,12 +128,14 @@
         </div>
         <div class="d-flex gap-2 w-sm-100">
             <div class="position-relative flex-grow-1">
-                <input type="text" class="form-control rounded-pill px-4 shadow-none border-1 border-secondary" placeholder="Search Order ID...">
+                <input class="form-control rounded-pill px-4 shadow-none border-1 border-secondary"
+                    placeholder="Search Order ID..." type="text" />
             </div>
-            <button class="btn btn-primary-stackly rounded-pill px-4"><span class="material-symbols-outlined fs-6 align-middle">refresh</span></button>
+            <button class="btn btn-primary-stackly rounded-pill px-4"
+                onclick="window.top.location.href='../404.html'"><span
+                    class="material-symbols-outlined fs-6 align-middle">refresh</span></button>
         </div>
     </div>
-
     <div class="kanban-wrapper">
         <!-- Column 1: Pending -->
         <div class="kanban-col">
@@ -58,20 +143,21 @@
                 <h6 class="fw-bold text-muted text-uppercase mb-0">Pending Print</h6>
                 <span class="badge bg-secondary rounded-pill">12</span>
             </div>
-            
             <div class="kanban-card card-urgent">
                 <div class="d-flex justify-content-between align-items-start mb-2">
                     <span class="fw-bold text-dark">#ORD-9021</span>
-                    <span class="badge bg-danger rounded-pill px-2 py-1" style="font-size: 0.7rem;"><span class="material-symbols-outlined" style="font-size: 10px; margin-right: 2px;">bolt</span>RUSH</span>
+                    <span class="badge bg-danger rounded-pill px-2 py-1" style="font-size: 0.7rem;"><span
+                            class="material-symbols-outlined"
+                            style="font-size: 10px; margin-right: 2px;">bolt</span>RUSH</span>
                 </div>
                 <p class="mb-3 text-dark small fw-bold">2x Premium Cotton Tee</p>
                 <div class="d-flex flex-wrap gap-2 mb-3">
                     <span class="sku-tag">TEE-BLK-L</span>
                     <span class="sku-tag">TEE-WHT-M</span>
                 </div>
-                <button class="btn btn-sm btn-outline-primary w-100 rounded-pill fw-bold">Start Production</button>
+                <button class="btn btn-sm btn-outline-primary w-100 rounded-pill fw-bold"
+                    onclick="window.top.location.href='../404.html'">Start Production</button>
             </div>
-
             <div class="kanban-card card-normal">
                 <div class="d-flex justify-content-between align-items-start mb-2">
                     <span class="fw-bold text-dark">#ORD-9025</span>
@@ -81,17 +167,16 @@
                 <div class="d-flex flex-wrap gap-2 mb-3">
                     <span class="sku-tag">HD-GRY-XL</span>
                 </div>
-                <button class="btn btn-sm btn-outline-primary w-100 rounded-pill fw-bold">Start Production</button>
+                <button class="btn btn-sm btn-outline-primary w-100 rounded-pill fw-bold"
+                    onclick="window.top.location.href='../404.html'">Start Production</button>
             </div>
         </div>
-
         <!-- Column 2: In Production -->
         <div class="kanban-col">
             <div class="kanban-header">
                 <h6 class="fw-bold text-muted text-uppercase mb-0">In Production</h6>
                 <span class="badge bg-primary rounded-pill">5</span>
             </div>
-            
             <div class="kanban-card card-normal">
                 <div class="d-flex justify-content-between align-items-start mb-2">
                     <span class="fw-bold text-dark">#ORD-8990</span>
@@ -102,31 +187,34 @@
                     <span class="sku-tag">MUG-WHT-11OZ</span>
                 </div>
                 <div class="progress mb-3" style="height: 6px; border-radius: 5px;">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" style="width: 65%"></div>
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" style="width: 65%">
+                    </div>
                 </div>
-                <button class="btn btn-sm btn-primary-stackly w-100 rounded-pill fw-bold">Send to QC</button>
+                <button class="btn btn-sm btn-primary-stackly w-100 rounded-pill fw-bold"
+                    onclick="window.top.location.href='../404.html'">Send to QC</button>
             </div>
         </div>
-
         <!-- Column 3: Ready to Ship -->
         <div class="kanban-col">
             <div class="kanban-header">
                 <h6 class="fw-bold text-muted text-uppercase mb-0">Ready to Ship</h6>
                 <span class="badge bg-success rounded-pill">28</span>
             </div>
-            
             <div class="kanban-card card-done">
                 <div class="d-flex justify-content-between align-items-start mb-2">
                     <span class="fw-bold text-dark">#ORD-8942</span>
-                    <span class="small text-success fw-bold d-flex align-items-center gap-1"><span class="material-symbols-outlined fs-6">verified</span> QC Passed</span>
+                    <span class="small text-success fw-bold d-flex align-items-center gap-1"><span
+                            class="material-symbols-outlined fs-6">verified</span> QC Passed</span>
                 </div>
                 <p class="mb-3 text-dark small fw-bold">1x Classic Hoodie</p>
                 <div class="bg-light p-2 rounded text-center mb-3">
                     <span class="small text-muted">Destination: New York, NY</span>
                 </div>
-                <button class="btn btn-sm btn-success w-100 rounded-pill fw-bold text-white">Generate Label</button>
+                <button class="btn btn-sm btn-success w-100 rounded-pill fw-bold text-white"
+                    onclick="window.top.location.href='../404.html'">Generate Label</button>
             </div>
         </div>
     </div>
 </body>
+
 </html>

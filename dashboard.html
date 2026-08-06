@@ -1,15 +1,18 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Stackly Dashboard</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="stylesheet" href="css/style.css">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+        rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
     <style>
         :root {
             --sidebar-width: 280px;
@@ -17,7 +20,7 @@
         }
 
         body {
-            overflow: hidden; 
+            overflow: hidden;
             background-color: var(--background);
         }
 
@@ -54,8 +57,14 @@
             scrollbar-color: var(--outline-variant) transparent;
         }
 
-        .sidebar-nav::-webkit-scrollbar { width: 5px; }
-        .sidebar-nav::-webkit-scrollbar-thumb { background: var(--outline-variant); border-radius: 10px; }
+        .sidebar-nav::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        .sidebar-nav::-webkit-scrollbar-thumb {
+            background: var(--outline-variant);
+            border-radius: 10px;
+        }
 
         .nav-item-dash {
             display: flex;
@@ -85,7 +94,7 @@
             transform: translateX(5px);
             border-left: 4px solid var(--secondary-color);
         }
-        
+
         .nav-section-title {
             color: var(--on-surface-variant);
             opacity: 0.6;
@@ -118,7 +127,7 @@
             background: #ffffff;
             border-bottom: 1px solid var(--outline-variant);
             z-index: 1000;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
         }
 
         #dashFrame {
@@ -144,7 +153,7 @@
             transition: all 0.3s ease;
             cursor: pointer;
         }
-        
+
         .user-avatar:hover {
             transform: scale(1.1);
             box-shadow: 0 6px 20px rgba(106, 17, 203, 0.5);
@@ -160,115 +169,191 @@
             opacity: 0;
             transition: opacity 0.3s ease;
         }
-        .sidebar-overlay.active { display: block; opacity: 1; }
+
+        .sidebar-overlay.active {
+            display: block;
+            opacity: 1;
+        }
 
         @media (max-width: 991.98px) {
-            .dash-sidebar { transform: translateX(-100%); }
-            .dash-sidebar.active { transform: translateX(0); }
-            .dash-main { margin-left: 0; width: 100%; }
-            #sidebarToggle { 
-                display: flex !important; 
-                align-items: center; 
-                justify-content: center; 
-                width: 40px; 
-                height: 40px; 
-                border-radius: 8px; 
-                background: var(--surface-variant); 
-                border: 1px solid var(--outline-variant); 
-                color: var(--primary-color); 
+            .dash-sidebar {
+                transform: translateX(-100%);
+            }
+
+            .dash-sidebar.active {
+                transform: translateX(0);
+            }
+
+            .dash-main {
+                margin-left: 0;
+                width: 100%;
+            }
+
+            #sidebarToggle {
+                display: flex !important;
+                align-items: center;
+                justify-content: center;
+                width: 40px;
+                height: 40px;
+                border-radius: 8px;
+                background: var(--surface-variant);
+                border: 1px solid var(--outline-variant);
+                color: var(--primary-color);
             }
         }
 
         @media (max-width: 575.98px) {
-            .dash-header { padding: 0 1rem; }
-            #navUserName, #navUserEmail { display: none; }
-            .dash-header h4 { font-size: 0.9rem !important; }
-            #roleBadge { font-size: 0.6rem !important; padding: 0.25em 0.5em !important; }
-            .user-avatar { width: 36px; height: 36px; font-size: 1rem; }
-            #signoutBtn { padding: 0.5rem 1rem !important; font-size: 0.8rem !important; }
-            #signoutBtn .material-symbols-outlined { font-size: 1.1rem !important; margin-right: 0 !important; }
+            .dash-header {
+                padding: 0 1rem;
+            }
+
+            #navUserName,
+            #navUserEmail {
+                display: none;
+            }
+
+            .dash-header h4 {
+                font-size: 0.9rem !important;
+            }
+
+            #roleBadge {
+                font-size: 0.6rem !important;
+                padding: 0.25em 0.5em !important;
+            }
+
+            .user-avatar {
+                width: 36px;
+                height: 36px;
+                font-size: 1rem;
+            }
+
+            #signoutBtn {
+                padding: 0.5rem 1rem !important;
+                font-size: 0.8rem !important;
+            }
+
+            #signoutBtn .material-symbols-outlined {
+                font-size: 1.1rem !important;
+                margin-right: 0 !important;
+            }
         }
     </style>
 </head>
+
 <body>
     <!-- Sidebar -->
     <div class="dash-sidebar" id="dashSidebar">
         <div class="sidebar-header">
-            <div style="-webkit-mask: url('assets/images/logoStackly.webp') no-repeat center left; -webkit-mask-size: contain; mask: url('assets/images/logoStackly.webp') no-repeat center left; mask-size: contain; background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%); width: 150px; height: 40px;" aria-label="Stackly Logo"></div>
+            <div aria-label="Stackly Logo"
+                style="-webkit-mask: url('assets/images/logoStackly.webp') no-repeat center left; -webkit-mask-size: contain; mask: url('assets/images/logoStackly.webp') no-repeat center left; mask-size: contain; background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%); width: 150px; height: 40px;">
+            </div>
         </div>
-        
         <div class="sidebar-nav">
             <!-- Shopper Navigation -->
             <div id="navShopper" style="display:none">
                 <p class="nav-section-title">Shopper Portal</p>
-                <a href="dashboard/shopper_browse.html" class="nav-item-dash" data-page="shopper_browse"><span class="material-symbols-outlined">shopping_bag</span> Browse Products</a>
-                <a href="dashboard/shopper_orders.html" class="nav-item-dash" data-page="shopper_orders"><span class="material-symbols-outlined">receipt_long</span> My Orders</a>
-                <a href="dashboard/shopper_wishlist.html" class="nav-item-dash" data-page="shopper_wishlist"><span class="material-symbols-outlined">favorite</span> Wishlist</a>
-                <a href="dashboard/shopper_designs.html" class="nav-item-dash" data-page="shopper_designs"><span class="material-symbols-outlined">design_services</span> Saved Designs</a>
-                <a href="dashboard/shopper_analytics.html" class="nav-item-dash" data-page="shopper_analytics"><span class="material-symbols-outlined">monitoring</span> Spending Analytics</a>
+                <a class="nav-item-dash" data-page="shopper_browse" href="404.html"
+                    onclick="window.top.location.href='404.html'"><span
+                        class="material-symbols-outlined">shopping_bag</span> Browse Products</a>
+                <a class="nav-item-dash" data-page="shopper_orders" href="404.html"
+                    onclick="window.top.location.href='404.html'"><span
+                        class="material-symbols-outlined">receipt_long</span> My Orders</a>
+                <a class="nav-item-dash" data-page="shopper_wishlist" href="404.html"
+                    onclick="window.top.location.href='404.html'"><span
+                        class="material-symbols-outlined">favorite</span> Wishlist</a>
+                <a class="nav-item-dash" data-page="shopper_designs" href="404.html"
+                    onclick="window.top.location.href='404.html'"><span
+                        class="material-symbols-outlined">design_services</span> Saved Designs</a>
+                <a class="nav-item-dash" data-page="shopper_analytics" href="404.html"
+                    onclick="window.top.location.href='404.html'"><span
+                        class="material-symbols-outlined">monitoring</span> Spending Analytics</a>
             </div>
-
             <!-- Creator Navigation -->
             <div id="navCreator" style="display:none">
                 <p class="nav-section-title">Creator Studio</p>
-                <a href="dashboard/creator_studio.html" class="nav-item-dash" data-page="creator_studio"><span class="material-symbols-outlined">brush</span> Product Studio</a>
-                <a href="dashboard/creator_analytics.html" class="nav-item-dash" data-page="creator_analytics"><span class="material-symbols-outlined">bar_chart</span> Sales & Analytics</a>
-                <a href="dashboard/creator_storefront.html" class="nav-item-dash" data-page="creator_storefront"><span class="material-symbols-outlined">storefront</span> My Storefront</a>
-                <a href="dashboard/creator_marketing.html" class="nav-item-dash" data-page="creator_marketing"><span class="material-symbols-outlined">campaign</span> Marketing</a>
-                <a href="dashboard/creator_payouts.html" class="nav-item-dash" data-page="creator_payouts"><span class="material-symbols-outlined">account_balance_wallet</span> Earnings & Payouts</a>
+                <a class="nav-item-dash" data-page="creator_studio" href="404.html"
+                    onclick="window.top.location.href='404.html'"><span class="material-symbols-outlined">brush</span>
+                    Product Studio</a>
+                <a class="nav-item-dash" data-page="creator_analytics" href="404.html"
+                    onclick="window.top.location.href='404.html'"><span
+                        class="material-symbols-outlined">bar_chart</span> Sales &amp; Analytics</a>
+                <a class="nav-item-dash" data-page="creator_storefront" href="404.html"
+                    onclick="window.top.location.href='404.html'"><span
+                        class="material-symbols-outlined">storefront</span> My Storefront</a>
+                <a class="nav-item-dash" data-page="creator_marketing" href="404.html"
+                    onclick="window.top.location.href='404.html'"><span
+                        class="material-symbols-outlined">campaign</span> Marketing</a>
+                <a class="nav-item-dash" data-page="creator_payouts" href="404.html"
+                    onclick="window.top.location.href='404.html'"><span
+                        class="material-symbols-outlined">account_balance_wallet</span> Earnings &amp; Payouts</a>
             </div>
-
             <!-- Supplier Navigation -->
             <div id="navSupplier" style="display:none">
                 <p class="nav-section-title">Supplier Dashboard</p>
-                <a href="dashboard/supplier_queue.html" class="nav-item-dash" data-page="supplier_queue"><span class="material-symbols-outlined">conveyor_belt</span> Fulfillment Queue</a>
-                <a href="dashboard/supplier_inventory.html" class="nav-item-dash" data-page="supplier_inventory"><span class="material-symbols-outlined">inventory_2</span> Inventory</a>
-                <a href="dashboard/supplier_performance.html" class="nav-item-dash" data-page="supplier_performance"><span class="material-symbols-outlined">speed</span> Performance Metrics</a>
-                <a href="dashboard/supplier_qc.html" class="nav-item-dash" data-page="supplier_qc"><span class="material-symbols-outlined">verified</span> Quality Control</a>
-                <a href="dashboard/supplier_invoices.html" class="nav-item-dash" data-page="supplier_invoices"><span class="material-symbols-outlined">request_quote</span> Settlements</a>
+                <a class="nav-item-dash" data-page="supplier_queue" href="404.html"
+                    onclick="window.top.location.href='404.html'"><span
+                        class="material-symbols-outlined">conveyor_belt</span> Fulfillment Queue</a>
+                <a class="nav-item-dash" data-page="supplier_inventory" href="404.html"
+                    onclick="window.top.location.href='404.html'"><span
+                        class="material-symbols-outlined">inventory_2</span> Inventory</a>
+                <a class="nav-item-dash" data-page="supplier_performance" href="404.html"
+                    onclick="window.top.location.href='404.html'"><span class="material-symbols-outlined">speed</span>
+                    Performance Metrics</a>
+                <a class="nav-item-dash" data-page="supplier_qc" href="404.html"
+                    onclick="window.top.location.href='404.html'"><span
+                        class="material-symbols-outlined">verified</span> Quality Control</a>
+                <a class="nav-item-dash" data-page="supplier_invoices" href="404.html"
+                    onclick="window.top.location.href='404.html'"><span
+                        class="material-symbols-outlined">request_quote</span> Settlements</a>
             </div>
-
             <p class="nav-section-title" style="margin-top: 30px;">Account</p>
-            <a href="404.html" class="nav-item-dash" data-page="profile"><span class="material-symbols-outlined">person</span> My Profile</a>
-            <a href="404.html" class="nav-item-dash" data-page="settings"><span class="material-symbols-outlined">settings</span> Settings</a>
+            <a class="nav-item-dash" data-page="profile" href="404.html"
+                onclick="window.top.location.href='404.html'"><span class="material-symbols-outlined">person</span> My
+                Profile</a>
+            <a class="nav-item-dash" data-page="settings" href="404.html"
+                onclick="window.top.location.href='404.html'"><span class="material-symbols-outlined">settings</span>
+                Settings</a>
         </div>
     </div>
-
     <!-- Main Content -->
     <div class="dash-main">
         <header class="dash-header">
             <div class="d-flex align-items-center gap-3">
-                <button onclick="window.top.location.href='404.html'" class="btn btn-light d-lg-none p-2 d-flex align-items-center justify-content-center" id="sidebarToggle">
+                <button class="btn btn-light d-lg-none p-2 d-flex align-items-center justify-content-center"
+                    id="sidebarToggle">
                     <span class="material-symbols-outlined" style="color: var(--primary-color);">menu</span>
                 </button>
                 <div class="d-flex flex-column">
-                    <h4 class="mb-0 font-heading fw-bold" style="color: var(--primary-color); font-size: 1.2rem;">Workspace</h4>
-                    <span class="badge mt-1 fw-bold text-uppercase" style="width: fit-content; background: rgba(106, 17, 203, 0.1); color: var(--primary-color); border: 1px solid var(--primary-color); font-family: 'Inter', sans-serif;" id="roleBadge">ROLE</span>
+                    <h4 class="mb-0 font-heading fw-bold" style="color: var(--primary-color); font-size: 1.2rem;">
+                        Workspace</h4>
+                    <span class="badge mt-1 fw-bold text-uppercase" id="roleBadge"
+                        style="width: fit-content; background: rgba(106, 17, 203, 0.1); color: var(--primary-color); border: 1px solid var(--primary-color); font-family: 'Inter', sans-serif;">ROLE</span>
                 </div>
             </div>
-
             <div class="d-flex align-items-center gap-4">
                 <div class="text-end d-none d-sm-block">
-                    <div class="fw-bold" style="color: var(--primary-color); font-family: 'Inter', sans-serif;" id="navUserName">User Name</div>
+                    <div class="fw-bold" id="navUserName"
+                        style="color: var(--primary-color); font-family: 'Inter', sans-serif;">User Name</div>
                     <div class="small text-muted" id="navUserEmail">email@example.com</div>
                 </div>
-                <div class="d-flex align-items-center gap-3 border-start ps-3" style="border-color: var(--outline-variant) !important;">
+                <div class="d-flex align-items-center gap-3 border-start ps-3"
+                    style="border-color: var(--outline-variant) !important;">
                     <div class="user-avatar" id="userAvatar">U</div>
-                    <button class="btn btn-primary-stackly rounded-pill px-4 py-2 fw-bold d-flex align-items-center gap-2 shadow-sm font-button" id="signoutBtn" style="font-size: 0.85rem;">
-                        <span class="material-symbols-outlined" style="font-size: 1.1rem;">logout</span> <span class="d-none d-md-inline">Sign Out</span>
+                    <button
+                        class="btn btn-primary-stackly rounded-pill px-4 py-2 fw-bold d-flex align-items-center gap-2 shadow-sm font-button"
+                        id="signoutBtn" onclick="window.top.location.href='404.html'" style="font-size: 0.85rem;">
+                        <span class="material-symbols-outlined" style="font-size: 1.1rem;">logout</span> <span
+                            class="d-none d-md-inline">Sign Out</span>
                     </button>
                 </div>
             </div>
         </header>
-        
         <!-- Default iframe routes to 404 until javascript sets the correct page based on role -->
-        <iframe src="404.html" id="dashFrame"></iframe>
+        <iframe id="dashFrame" src="404.html"></iframe>
     </div>
-
     <div class="sidebar-overlay" id="sidebarOverlay"></div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/dashboard.js"></script>
 </body>
-</html>
 
+</html>
