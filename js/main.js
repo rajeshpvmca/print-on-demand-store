@@ -59,7 +59,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const aosElements = [
         '.hero-section h1', '.hero-section p', '.hero-section .btn',
         '.section-title', '.feature-card', '.card', '.step-card', 
-        '.pricing-card', '.testimonial-card', 'img.img-fluid'
+        '.pricing-card', '.testimonial-card', 'img.img-fluid',
+        'section > div.container > div.row > div', 'section:not(.hero-section)'
     ];
     
     document.querySelectorAll(aosElements.join(', ')).forEach((el, index) => {
@@ -69,14 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Initialize AOS
-    if (typeof AOS !== 'undefined') {
-        AOS.init({
-            duration: 800,
-            once: true,
-            offset: 50
-        });
-    }
+    // AOS Initialization moved to window load event
 
     // Initialize Swiper for Hero Section
     if (typeof Swiper !== 'undefined' && document.querySelector('.heroSwiper')) {
@@ -174,5 +168,40 @@ document.addEventListener('DOMContentLoaded', () => {
         counters.forEach(counter => {
             counterObserver.observe(counter);
         });
+    }
+});
+
+// Window Load Event for Preloader and Animations
+window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+        // Wait for 2 seconds (2000ms) before starting the fade out
+        setTimeout(() => {
+            // Start fade out transition
+            preloader.classList.add('preloader-hidden');
+            
+            // Wait for transition to finish before removing from DOM
+            setTimeout(() => {
+                preloader.style.display = 'none';
+                
+                // Initialize AOS after preloader is completely hidden
+                if (typeof AOS !== 'undefined') {
+                    AOS.init({
+                        duration: 800,
+                        once: true,
+                        offset: 50
+                    });
+                }
+            }, 600); // matches the CSS transition duration
+        }, 2000); // 2 seconds delay
+    } else {
+        // Fallback if no preloader exists
+        if (typeof AOS !== 'undefined') {
+            AOS.init({
+                duration: 800,
+                once: true,
+                offset: 50
+            });
+        }
     }
 });
